@@ -1,0 +1,12 @@
+site:
+  title: Accordion Manual
+
+content:
+  sources:
+  - url: https://github.com/dawoong/test-antora.git
+    branched: [master]
+
+ui:
+  bundle:
+    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
+    snapshot: true
