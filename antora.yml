@@ -2,4 +2,4 @@ name: accordion manual
 title: Accordion Manual
 version: 3.0.0
 nav:
-- modules/ROOT/nav.adoc
+- modules/ROOT/navi.adoc
