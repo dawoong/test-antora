@@ -80,7 +80,7 @@
 **** xref:index.adoc#_커스텀_리소스_생성[커스텀 리소스 생성]
 **** xref:index.adoc#_커스텀_리소스_수정[커스텀 리소스 수정]
 **** xref:index.adoc#_커스텀_리소스_삭제[커스텀 리소스 삭제]
-*** xref:index.adocl#cluster-accesscontrol[접근제어]
+*** xref:index.adoc#cluster-accesscontrol[접근제어]
 **** xref:index.adoc#role[롤]
 **** xref:index.adoc#_롤바인딩[롤바인딩]
 **** xref:index.adoc#clusterrole[클러스터롤]
