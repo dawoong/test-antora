@@ -8,5 +8,5 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
-    snapshot: true
+    url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-213/ui-bundle.zip
+
