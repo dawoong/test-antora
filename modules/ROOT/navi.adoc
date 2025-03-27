@@ -96,7 +96,7 @@
 *** xref:index.adoc#cluster-setting[설정]
 **** xref:index.adoc#cluster-member[클러스터 멤버]
 **** xref:index.adoc#_클러스터_수신자[클러스터 수신자]
-**** xref:index.adoc#_알림_정책[알림 정책]
+**** xref:index.adoc#alert-policy[알림 정책]
 **** xref:index.adoc#_레지스트리[레지스트리]
 ** xref:index.adoc#_네임스페이스_메뉴_2[네임스페이스 메뉴]
 *** xref:index.adoc#_네임스페이스_대시보드[네임스페이스 대시보드]
