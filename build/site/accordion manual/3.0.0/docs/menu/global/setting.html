@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>글로벌 설정 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/global/setting.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/global/setting.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">글로벌 설정</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>글로벌 설정에서는 시스템 전반에 영향을 미치는 활성화 키와 알림 발송을 받는 수신자에 대한 설정이 가능하다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_활성화_키"><a class="anchor" href="#_활성화_키"></a>활성화 키</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>아코디언을 사용하기 위한 활성화 키를 관리한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/license_main.png" alt="license main"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Standard 또는 Trial</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Standard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>정식 활성화 키에 의해 관리받을 수 있는 타입</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Trial</p>
+<div class="ulist">
+<ul>
+<li>
+<p>일정 기간동안 아코디언을 사용해 볼 수 있는 타입</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">플랜</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Perpetual 또는 Subscription</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perpetual</p>
+<div class="ulist">
+<ul>
+<li>
+<p>영구적인 활성화 키</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Subscription</p>
+<div class="ulist">
+<ul>
+<li>
+<p>기간이 있는 활성화 키</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발행자</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 발행인 (Mantech)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">소유자</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 소유자</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발행일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 발행일</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">만료일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 만료일</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_활성화_키_등록"><a class="anchor" href="#_활성화_키_등록"></a>활성화 키 등록</h3>
+<div class="paragraph">
+<p>우측 상단의 <code>등록</code> 버튼을 선택한다. 모달이 나타나면 활성화 키를 입력하여 등록한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/license_create.png" alt="license create"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="global-receiver"><a class="anchor" href="#global-receiver"></a>글로벌 수신자</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>알림 정책에 따라 알림을 받을 수신자를 설정한다.</p>
+</div>
+<div class="sect2">
+<h3 id="_글로벌_수신자_개요"><a class="anchor" href="#_글로벌_수신자_개요"></a>글로벌 수신자 개요</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-overview.png" alt="receiver overview"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="ulist">
+<ul>
+<li>
+<p>이메일</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호스트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP Host 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP Port 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발신자 이메일</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발신 이메일 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">방식</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증 방식 <code>인증 안함</code>(익명), <code>Basic Auth</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 활성화</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 사용 여부</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP 사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP 사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수신자 이메일 목록</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수신자 이메일 정보</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>슬랙</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">토큰</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">슬랙 토큰 값</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">채널 목록</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">슬랙 채널명</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>웹훅</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Webhook URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">웹훅 URL 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증 타입</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>인증 안함</code>(익명), <code>Bearer 인증</code>, <code>basic 인증</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">토큰</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bearer 인증</code> 의 경우 토큰 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basic 인증</code> 의 경우 사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basic 인증</code> 의 경우 사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">바디</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청에 포함될 바디</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헤더</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청에 대한 헤더</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 인증서 검증</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">검증 시 <code>O</code>, 미검증 시 <code>X</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Root CA 인증서</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Root CA 인증서 정보가 담긴 시크릿 이름 및 data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증서/개인 키</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 인증서 및 개인키 정보가 담긴 시크릿 이름 및 data</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_글로벌_수신자_생성"><a class="anchor" href="#_글로벌_수신자_생성"></a>글로벌 수신자 생성</h3>
+<div class="paragraph">
+<p>수신자 생성 시 <code>이메일</code>, <code>슬랙</code>, <code>웹훅</code> 을 설정할 수 있다.</p>
+</div>
+<div class="sect3">
+<h4 id="_이메일_설정"><a class="anchor" href="#_이메일_설정"></a>이메일 설정</h4>
+<div class="paragraph">
+<p>수신자 구성 정보 및 수신 이메일을 입력 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_email_start.png" alt="receiver email start"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_email_receiverconfig.png" alt="receiver email receiverconfig"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_email_end.png" alt="receiver email end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_슬랙_설정"><a class="anchor" href="#_슬랙_설정"></a>슬랙 설정</h4>
+<div class="paragraph">
+<p>수신자 구성 정보 및 채널을 입력 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_slack_start.png" alt="receiver slack start"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_slack_receiverconfig.png" alt="receiver slack receiverconfig"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver_slack_end.png" alt="receiver slack end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_웹훅_설정"><a class="anchor" href="#_웹훅_설정"></a>웹훅 설정</h4>
+<div class="paragraph">
+<p>웹훅 URL, 헤더, 바디 정보를 입력한다.<br>
+<code>인증 안함</code>, <code>Bearer 인증</code>, <code>basic 인증</code> 중 인증 타입을 선택한다.<br>
+웹훅 URL, 헤더, 바디 정보 입력 및 인증 타입 선택 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-webhook-start.png" alt="receiver webhook start"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Bearer 인증 선택 시 토큰 정보가 담긴 시크릿 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-webhook-bearer.png" alt="receiver webhook bearer"></span></p>
+</div>
+<div class="paragraph">
+<p>basic 인증 선택 시 사용자 및 비밀번호 정보가 담긴 시크릿 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-webhook-basic.png" alt="receiver webhook basic"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>TLS 인증서 검증 건너뛰기 해제 시<br>
+Root CA 인증서 및 인증서/개인키를 동일한 방법으로 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-webhook-end.png" alt="receiver webhook end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Body 예시</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-webhook-body.png" alt="receiver webhook body"></span></p>
+</div>
+<div class="paragraph">
+<p>웹훅 바디는 JSON 형식으로 입력한다. 그러면 응답 관련 리소스인 notification manifest 와 함께 작성한 Json 형식의 데이터가 웹훅 발생 시 함께 전송된다.</p>
+</div>
+<div class="listingblock manifest">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">{
+  "test": "sample1",
+  "manifest": {
+    "kind": "ClusterNotification",
+    "apiVersion": "alert.accordions.co.kr/v1beta1",
+    "metadata": {
+      ...
+      },
+     ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>글로벌 수신자 생성 시 생성된 수신자/수신자 구성 정보는 모든 멤버 클러스터로 자동 복사됩니다. 이 수신자/수신자 구성 정보에는 SMTP 서버의 계정과 비밀번호, Slack이나 Webhook 서버의 사용자 계정(사용자명, 비밀번호)과 토큰, 인증서 정보 등의 기밀정보가 포함될 수 있습니다.<br>
+기밀정보는 각 멤버 클러스터의 Secret에 보관됩니다. 글로벌 수신자를 사용하기 전에 다음 사항을 반드시 숙지하세요.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>정보 유출 위험: 복사된 수신자/수신자 구성 정보는 모든 멤버 클러스터에 배포되므로, 각 클러스터의 보안 수준이 매우 중요합니다. 클러스터에 접근 권한을 철저히 관리하여 무단 접근을 방지하세요.<br>
+클러스터 수신자/수신자 구성 정보 중 기밀정보는 acc-system 네임스페이스의 secret으로 관리됩니다. 클러스터 관리자의 권한 사용자는 기밀정보의 접근이 가능하나, 그 외 네임스페이스 접근 사용자는 조회를 할 수 없습니다.<br>
+자세한 내용은 <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Kubernetes의 RBAC(역할 기반 접근 제어)</a>를 참고하세요.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_글로벌_수신자_수정"><a class="anchor" href="#_글로벌_수신자_수정"></a>글로벌 수신자 수정</h3>
+<div class="paragraph">
+<p>수신자 생성과 동일하게 <code>이메일</code>, <code>슬랙</code>, <code>웹훅</code> 내용 변경 후 <code>테스트</code> 버튼을 각각 눌러 유효한 설정인지 확인한 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_글로벌_수신자_삭제"><a class="anchor" href="#_글로벌_수신자_삭제"></a>글로벌 수신자 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 수신자를 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/global/setting/receiver-delete.png" alt="receiver delete"></span></p>
+</div>
+<div class="paragraph">
+<p>모달에서 수신자 이름을 입력 후 <code>삭제하기</code> 버튼을 선택한다.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

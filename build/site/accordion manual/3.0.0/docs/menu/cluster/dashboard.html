@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>클러스터 대시보드 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/cluster/dashboard.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/cluster/dashboard.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">클러스터 대시보드</h1>
+<div class="paragraph">
+<p>클러스터 대시보드는 클러스터의 쿠버네티스 리소스 및 CPU/메모리와 같은 시스템 리소스 사용 현황 정보를
+제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/dashboard/cluster-dashboard.png" alt="cluster dashboard">
+</div>
+</div>
+<div class="paragraph">
+<p>표시되는 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 정보</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터 기본 정보 및 CPU, 메모리, 네트워크 사용 정보를 제공한다.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>이름: 클러스터 이름</p>
+</li>
+<li>
+<p>프로바이더: 쿠버네티스 제공자</p>
+</li>
+<li>
+<p>API 서버: 아코디언 멤버 에이전트 엔드포인트</p>
+</li>
+<li>
+<p>생성 날짜: 클러스터 등록 시간</p>
+</li>
+<li>
+<p>설명: 클러스터 설명</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>생성 날짜</code> 시간 기준은 UTC 이다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">쿠버네티스 리소스 정보</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터에 배포된 쿠버네티스 리소스 정보를 제공한다. <code>자세히 보기</code> 클릭 시 해당 리소스의 목록 화면으로 이동하며 상세 정보를 확인할 수 있다.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+파드의 경우 <code>상태</code> 를 클릭하면 해당 <code>상태</code> 로 필터링 된 파드 목록 화면으로 이동한다.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">파드 CPU/메모리 사용량 Top5</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터에 배포된 파드 중 CPU/메모리 사용량이 많은 순서대로 5개의 파드 정보를 제공한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">노드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터를 구성하는 노드들의 정보를 제공한다.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>이름: 노드 이름</p>
+</li>
+<li>
+<p>상태: 노드 상태 (Ready 또는 NotReady)</p>
+</li>
+<li>
+<p>롤: 노드 역할 (control-plane 또는 worker)</p>
+</li>
+<li>
+<p>파드: 노드에 배포된 파드 현황 (배포된 파드의 수/최대 배포가능한 파드의 수)</p>
+</li>
+<li>
+<p>CPU: 노드 CPU 사용 현황 (사용중인 코어 수/노드의 코어 수)</p>
+</li>
+<li>
+<p>메모리: 노드 메모리 사용 현황 (사용중인 메모리 용량/노드의 메모리 용량)</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

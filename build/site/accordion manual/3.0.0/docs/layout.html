@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>화면 구성 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/layout.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/layout.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">화면 구성</h1>
+<div class="sect1">
+<h2 id="_화면_영역"><a class="anchor" href="#_화면_영역"></a>화면 영역</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>화면은 다음과 같이 3개의 영역으로 나누어진다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">영역</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헤더 영역</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">화면의 상단에 위치한다. 스코프(클러스터/네임스페이스) 를 선택할 수 있고 사용자 정보가 표시된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메뉴 영역</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">화면의 좌측에 위치한다. 각 스코프(글로벌/클러스터/네임스페이스) 에 대한 메뉴를 표시한다. 메뉴는 사용자
+  권한에 따라 사용가능한 항목이 표시된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이벤트 영역</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">화면의 하단에 위치하여 멀티 클러스터에서 발생하는 이벤트를 표시한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메인 영역</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">각 메뉴에 대한 화면을 표시한다. 메뉴별 정보를 표시하고 기능을 설정, 제어, 모니터할 수 있다.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_헤더_영역"><a class="anchor" href="#_헤더_영역"></a>헤더 영역</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/header.png" alt="header">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_스코프_선택"><a class="anchor" href="#_스코프_선택"></a>스코프 선택</h4>
+<div class="sect4">
+<h5 id="_클러스터_선택"><a class="anchor" href="#_클러스터_선택"></a>클러스터 선택</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/header-cluster-menu.png" alt="360" width="387">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>네임스페이스, 노드 관리와 같이 클러스터 스코프에서 필요한 작업을 수행하기 위해 클러스터를 선택할 수 있다.</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect4">
+<h5 id="_네임스페이스_선택"><a class="anchor" href="#_네임스페이스_선택"></a>네임스페이스 선택</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/header-namespace-menu.png" alt="360" width="387">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>애플리케이션, 빌드와 같이 네임스페이스 스코프에서 필요한 작업을 수행하기 위해 네임스페이스를 선택할 수 있다.</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_사용자_설정"><a class="anchor" href="#_사용자_설정"></a>사용자 설정</h4>
+<div class="sect4">
+<h5 id="_비밀번호_변경"><a class="anchor" href="#_비밀번호_변경"></a>비밀번호 변경</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/profile-password.png" alt="350" width="376">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>사용자의 비밀번호를 변경할 수 있다.</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_매뉴얼"><a class="anchor" href="#_매뉴얼"></a>매뉴얼</h5>
+<div class="literalblock">
+<div class="content">
+<pre>아코디언 매뉴얼을 확인할 수 있다.</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_kubectl_사용_가이드"><a class="anchor" href="#_kubectl_사용_가이드"></a>kubectl 사용 가이드</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/profile-kubectl.png" alt="760" width="356">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>아코디언의 버전에 맞는 <code>kubectl</code> 실행 파일 다운로드 경로를 알 수 있다.</p>
+</li>
+<li>
+<p>아코디언 사용자의 <code>kubeconfig</code> 를 다운로드 받을 수 있다.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect4">
+<h5 id="_api_key"><a class="anchor" href="#_api_key"></a>API Key</h5>
+<div class="literalblock">
+<div class="content">
+<pre>아코디언 API를 이용할 수 있는 token 을 관리한다.</pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_api_key_목록"><a class="anchor" href="#_api_key_목록"></a>API Key 목록</h6>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/apikey-list.png" alt="apikey list">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>생성한 <code>token</code> 정보를 조회한다.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">기능</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>설명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상태</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>token</code> 이 유효한지 알 수 있다. (<code>Active</code> or <code>InActive</code>)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Key</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>token</code> 정보</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>token</code> 생성일</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">만료일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>token</code> 만료일로 만료일이 되면 자동 삭제된다.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect5">
+<h6 id="_api_key_생성"><a class="anchor" href="#_api_key_생성"></a>API Key 생성</h6>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/apikey-creating.png" alt="apikey creating">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>간단한 설명을 포함하여 <code>token</code> 을 생성한다.</p>
+</li>
+<li>
+<p>가급적 만료일을 설정하여 생성하길 권장한다.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/apikey-created.png" alt="apikey created">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>생성한 <code>token</code> 을 확인한다.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_api_key_삭제"><a class="anchor" href="#_api_key_삭제"></a>API Key 삭제</h6>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/apikey-delete.png" alt="760" width="357">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>수동으로 <code>token</code> 을 삭제한다.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_로그아웃"><a class="anchor" href="#_로그아웃"></a>로그아웃</h5>
+<div class="literalblock">
+<div class="content">
+<pre>사용자 로그아웃을 한다.</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_메뉴_영역"><a class="anchor" href="#_메뉴_영역"></a>메뉴 영역</h3>
+<div class="paragraph">
+<p>메뉴는 스코프별로 분류되며 스코프는 글로벌, 클러스터, 네임스페이스 3개로 구분된다.</p>
+</div>
+<div class="sect3">
+<h4 id="_글로벌_메뉴"><a class="anchor" href="#_글로벌_메뉴"></a>글로벌 메뉴</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메뉴</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>설명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">글로벌 대시보드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>멀티 클러스터 모니터링 대시보드로 멀티 클러스터와 리소스의 상태 정보를 조회한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>호스트 클러스터 및 호스트 클러스터와 연결된 멤버 클러스터의 정보를 조회하고 관리한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>헬름 차트를 사용하기 위해 헬름 리포지터리를 조회하고 관리한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">계정</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>아코디언 전반에 걸쳐 계정 정보를 관리한다.<br>
+사용자, 그룹 및 그리고 글로벌/클러스터/네임스페이스 스코프 별 메뉴에 대한 권한을 관리하고 사용자/그룹과 글로벌 권한을 바인딩하여 글로벌 멤버로 설정한다.<br>
+그 외에 사용자의 접속 로그를 조회할 수 있다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>사용자: 사용자 정보를 조회, 관리</p>
+</li>
+<li>
+<p>그룹: 사용자 그룹 정보를 조회, 관리</p>
+</li>
+<li>
+<p>글로벌 권한: 글로벌 스코프의 메뉴에 대해 사용 권한을 집합하여 단일 권한으로 관리</p>
+</li>
+<li>
+<p>클러스터 권한: 클러스터 스코프의 메뉴에 대해 사용 권한을 집합하여 단일 권한으로 관리</p>
+</li>
+<li>
+<p>네임스페이스 권한: 네임스페이스 스코프의 메뉴에 대해 사용 권한을 집합하여 단일 권한으로 관리</p>
+</li>
+<li>
+<p>글로벌 멤버: 사용자/그룹과 글로벌 권한을 바인딩한다.</p>
+</li>
+<li>
+<p>사용자 접속 로그: 사용자의 접속 로그를 조회한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">글로벌 설정</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키와 알림 발송을 위한 글로벌 수신자를 관리한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>활성화 키: 활성화 키 정보를 조회, 등록한다.</p>
+</li>
+<li>
+<p>글로벌 수신자: 알림 발송을 받을 글로벌 수신자 정보를 관리한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_클러스터_메뉴"><a class="anchor" href="#_클러스터_메뉴"></a>클러스터 메뉴</h4>
+<div class="paragraph">
+<p>클러스터 메뉴는 개별 클러스터 스코프에서 서비스 배포와 운영을 위한 메뉴를 제공한다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메뉴</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>설명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 대시보드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 클러스터의 리소스 상태 정보를 제공한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 클러스터의 네임스페이스 정보를 관리한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">노드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 클러스터를 구성하는 노드의 정보를 관리한다. 그리고 노드를 스케줄 대상에서 제외하거나 노드에
+배포된 파드를 다른 노드로 이동시킬 수 있다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>헬름을 이용해 애플리케이션을 클러스터에 배포한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">워크로드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>워크로드 리소스 정보를 관리하기 위한 대시보드를 제공하고 편집기 등으로 관리한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>워크로드 대시보드: 배포한 파드 정보를 차트로 표시한다.</p>
+</li>
+<li>
+<p>파드: 파드 정보를 제공하고 관리한다. 컨테이너 로그 및 터미널을 이용해 접속할 수 있다.</p>
+</li>
+<li>
+<p>디플로이먼트/스테이트풀셋: 파드를 관리하는 리소스로 편집기로 관리하며 오토스케일을 설정할 수 있다.</p>
+</li>
+<li>
+<p>데몬셋: 노드마다 파드를 실행하도록 제어한다.</p>
+</li>
+<li>
+<p>잡/크론잡: 특정 작업을 일시적/주기적으로 실행할 수 있도록 관리한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">구성</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>시스템과 애플리케이션 구성 및 설정에 필요한 정보를 관리한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>컨피그맵/시크릿: 일반 정보 또는 기밀성 정보를 저장한다.</p>
+</li>
+<li>
+<p>HPA/리밋레인지: 수평적 오토스케일 및 리소스 할당을 제한한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네트워크</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>애플리케이션 연동을 위해 네트워크 구성에 필요한 리소스를 관리한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>서비스: 애플리케이션을 네트워크 서비스로 노출한다.</p>
+</li>
+<li>
+<p>인그레스: 서비스를 http 또는 https 경로로 노출한다.</p>
+</li>
+<li>
+<p>네트워크폴리시: OSI 3 또는 4 계층에서 트래픽 흐름을 제어한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">스토리지</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>스토리지 목록을 확인할 수 있으며 YAML/생성/수정/삭제할 수 있다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>퍼시스턴트볼륨: NFS 와 같이 스토리지 구현에 필요한 정보를 관리한다.</p>
+</li>
+<li>
+<p>퍼시스턴트볼륨클레임: 스토리지에 대해 요청을 하는 리소스 정보를 관리한다.</p>
+</li>
+<li>
+<p>스토리지클래스: 퍼시스턴트볼륨을 동적으로 배포한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">커스텀 리소스</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>쿠버네티스 커스텀 리소스를 관리한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">접근제어</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>쿠버네티스의 역할 기반 접근 제어를 관리하고 구성한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>서비스어카운트: 주로 파드에 인증 정보를 제공한다. (사용자 역할)</p>
+</li>
+<li>
+<p>롤/클러스터롤: API나 리소스에 대한 권한을 설정한다.</p>
+</li>
+<li>
+<p>롤바인딩/클러스터롤바인딩: 롤/클러스터롤을 사용자 또는 서비스어카운트 등에 연결한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모니터링</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>시스템 상태 및 각종 로그를 조회한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템: 클러스터 내 CPU, 메모리와 같은 리소스 사용량 정보를 제공한다.</p>
+</li>
+<li>
+<p>이벤트 로그: 쿠버네티스 이벤트 로그를 조회한다.</p>
+</li>
+<li>
+<p>컨테이너 로그: 쿠버네티스에 배포되었던 컨테이너에서 발생한 로그를 조회한다.</p>
+</li>
+<li>
+<p>감사 로그: 클러스터 내 감사 로그를 조회한다.</p>
+</li>
+<li>
+<p>알림 로그: 클러스터 내 발생한 알림 정보를 조회한다.</p>
+</li>
+<li>
+<p>서비스메시: 클러스터 내 서비스 간의 통신 정보를 표시한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">설정</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터를 사용하는 멤버를 구성하고 알림 정책을 세운다.
+레지스트리 정보 및 알림을 위한 클러스터 수신자 정보를 설정한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>클러스터 멤버: 클러스터 권한과 사용자/그룹을 연결한다.</p>
+</li>
+<li>
+<p>클러스터 수신자: 알림 발송을 받을 클러스터 수신자 정보를 관리한다.</p>
+</li>
+<li>
+<p>알림 정책: 클러스터 알림 발송 규칙 및 발송 주기/수신자 등을 설정힌다.</p>
+</li>
+<li>
+<p>레지스트리: 컨테이너 이미지를 배포하고 가져올 레지스트리 저장소 정보를 설정한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_네임스페이스_메뉴"><a class="anchor" href="#_네임스페이스_메뉴"></a>네임스페이스 메뉴</h4>
+<div class="paragraph">
+<p>네임스페이스 메뉴는 네임스페이스 스코프에서 서비스의 배포와 운영을 위한 메뉴를 제공한다.</p>
+</div>
+<div class="paragraph">
+<p>메뉴 중 일부는 클러스터 메뉴와 중복된다. 중복되는 메뉴의 경우 동일한 기능에 대해 접근하는 스코프의
+차이를 제외하고 대부분 동일한 기능을 제공한다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메뉴</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>설명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스 대시보드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 네임스페이스의 리소스 상태 정보를 제공한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>헬름과 카탈로그를 이용해 애플리케이션을 클러스터에 배포한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>헬름: 헬름 차트로 애플리케이션을 배포한다. 주로 빌드를 수행하지 않는 서비스형 애플리케이션을 배포한다.</p>
+</li>
+<li>
+<p>카탈로그: 카탈로그로 애플리케이션을 배포한다. 빌드 파이프라인을 지원한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">빌드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>애플리케이션 빌드에 필요한 정보를 제어하고 관리한다. 컨테이너 이미지를 빌드할 수 있고 빌드에 필요한
+파이프라인 또는 승인에 대해 설정한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>파이프라인: 태스크를 조합하여 빌드를 수행할 파이프라인을 작성한다.</p>
+</li>
+<li>
+<p>승인: 파이프라인에서 발생한 승인 요청을 처리한다.</p>
+</li>
+<li>
+<p>태스크 템플릿: 파이프라인 작성시 사용하는 태스크에 대한 템플릿을 관리한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">워크로드</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>클러스터 메뉴</code> 의 <code>워크로드</code> 메뉴와 동일한 기능을 네임스페이스 스코프에서 수행한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">구성</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>클러스터 메뉴</code> 의 <code>구성</code> 메뉴와 동일한 기능을 네임스페이스 스코프에서 수행한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네트워크</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>클러스터 메뉴</code> 의 <code>네트워크</code> 메뉴와 동일한 기능을 네임스페이스 스코프에서 수행한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">스토리지</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>퍼시스턴트볼륨클레임 리소스 정보를 관리한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">접근제어</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>쿠버네티스의 역할 기반 접근 제어를 관리하고 구성한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>서비스어카운트: 주로 파드에 인증 정보를 제공한다. (사용자 역할)</p>
+</li>
+<li>
+<p>롤: API나 리소스에 대한 권한을 설정한다.</p>
+</li>
+<li>
+<p>롤바인딩: 롤을 사용자 또는 서비스어카운트 등에 연결한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모니터링</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>시스템 및 애플리케이션 상태 및 각종 로그를 조회한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템: 네임스페이스 내 CPU, 메모리와 같은 리소스 사용량 정보를 제공한다.</p>
+</li>
+<li>
+<p>애플리케이션: 스카우터로 수집한 애플리케이션에 대한 메트릭 정보를 제공한다.</p>
+</li>
+<li>
+<p>이벤트 로그: 네임스페이스에서 발생한 쿠버네티스 이벤트 로그를 조회한다.</p>
+</li>
+<li>
+<p>컨테이너 로그: 네임스페이스에 배포되었던 컨테이너에서 발생한 로그를 조회한다.</p>
+</li>
+<li>
+<p>감사 로그: 네임스페이스 내 감사 로그를 조회한다.</p>
+</li>
+<li>
+<p>알림 로그: 네임스페이스 내 발생한 알림 정보를 조회한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">설정</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>네임스페이스를 사용하는 멤버를 구성한다. 그리고 알림 정책을 세우고 알림을 위한 네임스페이스 수신자 정보를 설정한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>네임스페이스 멤버: 네임스페이스 권한과 사용자/그룹을 연결한다.</p>
+</li>
+<li>
+<p>네임스페이스 수신자: 알림 발송을 받을 네임스페이스 수신자 정보를 관리한다.</p>
+</li>
+<li>
+<p>알림 정책: 네임스페이스 알림 발송 규칙 및 발송 주기/수신자 등을 설정한다.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_이벤트_영역"><a class="anchor" href="#_이벤트_영역"></a>이벤트 영역</h3>
+<div class="paragraph">
+<p>이벤트는 멀티 클러스터 쿠버네티스 실시간 이벤트 정보를 제공하며 기본으로 최소화되어있으며 이벤트 영역을 클릭하면 상세 조회할 수 있다.</p>
+</div>
+<div class="sect3">
+<h4 id="_이벤트_영역의_최소화"><a class="anchor" href="#_이벤트_영역의_최소화"></a>이벤트 영역의 최소화</h4>
+<div class="paragraph">
+<p>이벤트 영역에 우측 툴팁으로 현재 실시간으로 발생한 이벤트 수를 확인할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/event.png" alt="event">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이벤트_영역의_최대화"><a class="anchor" href="#_이벤트_영역의_최대화"></a>이벤트 영역의 최대화</h4>
+<div class="paragraph">
+<p>이벤트 영역의 최대화 시 이벤트 상세 확인 및 검색할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/layout/event-list.png" alt="event list">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">항목</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>설명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Age</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트가 발생한 시간</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>클러스터 명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>네임스페이스 명</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 타입</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Normal: 일반적인 작업으로 발생된 이벤트</p>
+</li>
+<li>
+<p>Warning: 오류에 의해 발생된 이벤트</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원인</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 발생 이유</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">오브젝트</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>오브젝트 정보</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메세지</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 상세 메시지</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>스토리지 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/cluster/storage.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/cluster/storage.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">스토리지</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>컨테이너 환경에서 디스크는 일반 환경과 다른 특성을 가지고 있다. 컨테이너 내부에서 저장한 파일은 임시적인
+것으로 컨테이너가 삭제되면 저장한 컨텐츠도 함께 삭제되며 파드의 집합으로 운영되는 경우를 고려하여 데이터의
+공유에 대해서도 검토가 필요하다. 스토리지 리소스들을 이용해 이런 문제들을 해결할 수 있다. 스토리지
+리소스들은 컨테이너가 삭제되더라도 데이터를 보존하고 파드의 집합에서 데이터를 공유하는 방법을 제공한다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_퍼시스턴트볼륨"><a class="anchor" href="#_퍼시스턴트볼륨"></a>퍼시스턴트볼륨</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>퍼시스턴트볼륨은 프로비저닝하거나 스토리지 클래스를 사용하여 동적으로 프로비저닝한 클러스터의 스토리지이다.</p>
+</div>
+<div class="sect2">
+<h3 id="_토폴로지"><a class="anchor" href="#_토폴로지"></a>토폴로지</h3>
+<div class="paragraph">
+<p>퍼시스턴트볼륨과 관련된 리소스를 토폴로지 형태로 보여준다.<br>
+기본 기능은 파드와 내용이 동일하기 때문에 <a href="#pod-topology">파드 토폴로지</a>를 참고한다.<br></p>
+</div>
+<div class="paragraph">
+<p>퍼시스턴트볼륨의 토폴로지에서 출력되는 리소스는 다음과 같다.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- 퍼시스턴트볼륨, 스토리지클래스
+- 퍼시스턴트볼륨클레임</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pv/pv-topology.png" alt="pv topology">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨_생성"><a class="anchor" href="#_퍼시스턴트볼륨_생성"></a>퍼시스턴트볼륨 생성</h3>
+<div class="paragraph">
+<p><code>+ 퍼시스턴트볼륨 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 퍼시스턴트볼륨 리소스 정보를 입력하여 생성할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pv/pv-create.png" alt="pv create">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨_수정"><a class="anchor" href="#_퍼시스턴트볼륨_수정"></a>퍼시스턴트볼륨 수정</h3>
+<div class="paragraph">
+<p>수정하려는 퍼시스턴트볼륨을 선택하고 우측의 YAML 편집기에서 정보를 변경 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pv/pv-fix.png" alt="pv fix">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨_삭제"><a class="anchor" href="#_퍼시스턴트볼륨_삭제"></a>퍼시스턴트볼륨 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 퍼시스턴트볼륨을 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pv/pv-delete.png" alt="pv delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 퍼시스턴트볼륨 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-pvc"><a class="anchor" href="#cluster-pvc"></a>퍼시스턴트볼륨클레임</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>퍼시스턴트볼륨클레임은 사용자 스토리지에 대한 요청이다. 퍼시스턴트볼륨클레임은 퍼시스턴트볼륨 리소스를
+사용하며 특정 크기 및 접근 모드를 요청할 수 있다.</p>
+</div>
+<div class="sect2">
+<h3 id="_토폴로지_2"><a class="anchor" href="#_토폴로지_2"></a>토폴로지</h3>
+<div class="paragraph">
+<p>퍼시스턴트볼륨클레임과 관련된 리소스를 토폴로지 형태로 보여준다.<br>
+기본 기능은 파드와 내용이 동일하기 때문에 <a href="#pod-topology">파드 토폴로지</a>를 참고한다.<br></p>
+</div>
+<div class="paragraph">
+<p>퍼시스턴트볼륨클레임의 토폴로지에서 출력되는 리소스는 다음과 같다.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- 퍼시스턴트볼륨, 스토리지클래스
+- 퍼시스턴트볼륨클레임
+- 파드</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pvc/pvc-topology.png" alt="pvc topology">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨클레임_생성"><a class="anchor" href="#_퍼시스턴트볼륨클레임_생성"></a>퍼시스턴트볼륨클레임 생성</h3>
+<div class="paragraph">
+<p><code>+ 퍼시스턴트볼륨클레임 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 퍼시스턴트볼륨클레임 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pvc/pvc-create.png" alt="pvc create">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨클레임_수정"><a class="anchor" href="#_퍼시스턴트볼륨클레임_수정"></a>퍼시스턴트볼륨클레임 수정</h3>
+<div class="paragraph">
+<p>수정하려는 퍼시스턴트볼륨클레임을 선택하고 우측의 YAML 편집기에서 정보를 변경 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pvc/pvc-fix.png" alt="pvc fix">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_퍼시스턴트볼륨클레임_삭제"><a class="anchor" href="#_퍼시스턴트볼륨클레임_삭제"></a>퍼시스턴트볼륨클레임 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 퍼시스턴트볼륨클레임을 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/pvc/pvc-delete.png" alt="pvc delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 퍼시스턴트볼륨클레임 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_스토리지클래스"><a class="anchor" href="#_스토리지클래스"></a>스토리지클래스</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>스토리지클래스는 해당 스토리지클래스에 속하는 퍼시스턴트볼륨을 동적으로 프로비저닝한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/storageclass/storageclass-list.png" alt="storageclass list">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_스토리지클래스_생성"><a class="anchor" href="#_스토리지클래스_생성"></a>스토리지클래스 생성</h3>
+<div class="paragraph">
+<p><code>+ 스토리지클래스 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 스토리지클래스 리소스 정보를 입력하여 생성할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/storageclass/storageclass-create.png" alt="storageclass create">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_스토리지클래스_수정"><a class="anchor" href="#_스토리지클래스_수정"></a>스토리지클래스 수정</h3>
+<div class="paragraph">
+<p>수정하려는 스토리지클래스를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_스토리지클래스_삭제"><a class="anchor" href="#_스토리지클래스_삭제"></a>스토리지클래스 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 스토리지클래스를 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/storage/storageclass/storageclass-delete.png" alt="storageclass delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 스토리지클래스 이름을 입력하여 삭제한다.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

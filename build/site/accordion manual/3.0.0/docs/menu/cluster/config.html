@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>구성 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/cluster/config.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/cluster/config.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">구성</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>컨피그맵과 시크릿은 애플리케이션(또는 워크로드)가 정상적으로 실행되기 위해 필요한 구성요소 정보를 저장한다.
+그 외에도 오토스케일 설정을 위한 HPA와 리소스 제한을 위한 리밋레인지 설정을 할 수 있다.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_컨피그맵"><a class="anchor" href="#_컨피그맵"></a>컨피그맵</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>컨피그맵은 키-값 쌍으로 기밀이 아닌 데이터를 저장한다.</p>
+</div>
+<div class="sect2">
+<h3 id="_개요"><a class="anchor" href="#_개요"></a>개요</h3>
+<div class="paragraph">
+<p>배포된 컨피그맵의 세부 정보, 데이터, 이진 데이터, 참조 리소스, 이벤트를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-overview.png" alt="configmap overview">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_세부_정보"><a class="anchor" href="#_세부_정보"></a>세부 정보</h4>
+<div class="paragraph">
+<p>컨피그맵에 대한 세부 정보를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-info.png" alt="configmap info">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_데이터"><a class="anchor" href="#_데이터"></a>데이터</h4>
+<div class="paragraph">
+<p>컨피그맵의 데이터 정보를 제공하며 우측에 복사 버튼을 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-data.png" alt="configmap data">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이진_데이터"><a class="anchor" href="#_이진_데이터"></a>이진 데이터</h4>
+<div class="paragraph">
+<p>컨피그맵의 이진 데이터 정보를 제공하며 우측에 미리보기와 다운로드 버튼을 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-binarydata.png" alt="configmap binarydata">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="config-ref-refresource"><a class="anchor" href="#config-ref-refresource"></a>참조 리소스</h4>
+<div class="paragraph">
+<p>컨피그맵의 참조 리소스 정보를 제공하며 클릭 시 해당 리소스로 이동된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-refresource.png" alt="configmap refresource">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="config-event-info"><a class="anchor" href="#config-event-info"></a>이벤트 정보</h4>
+<div class="paragraph">
+<p>컨피그맵에서 발생하는 이벤트 정보를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-event.png" alt="configmap event">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 타입</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Normal: 일반적인 작업으로 발생된 이벤트</p>
+</li>
+<li>
+<p>Warning: 오류에 의해 발생된 이벤트</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메시지</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 메시지</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원인</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 발생 이유</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">생성된 시간</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>이벤트 생성 후 지난 시간</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_토폴로지"><a class="anchor" href="#_토폴로지"></a>토폴로지</h4>
+<div class="paragraph">
+<p>컨피그맵과 관련된 리소스를 토폴로지 형태로 보여준다.<br>
+기본 기능은 파드와 내용이 동일하기 때문에 <a href="#pod-topology">파드 토폴로지</a>를 참고한다.<br></p>
+</div>
+<div class="paragraph">
+<p>컨피그맵의 토폴로지에서 출력되는 리소스는 다음과 같다.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- 컨피그맵
+- 파드</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-topology.png" alt="configmap topology">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_컨피그맵_생성"><a class="anchor" href="#_컨피그맵_생성"></a>컨피그맵 생성</h3>
+<div class="paragraph">
+<p><code>+ 컨피그맵 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 컨피그맵 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-create.png" alt="configmap create">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_컨피그맵_수정"><a class="anchor" href="#_컨피그맵_수정"></a>컨피그맵 수정</h3>
+<div class="paragraph">
+<p>수정하려는 컨피그맵을 선택하고 우측의 <code>수정</code> 버튼을 클릭하여 정보 수정 후 <code>컨피그맵 수정</code> 버튼을 클릭하여 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-fix.png" alt="configmap fix">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_컨피그맵_복제"><a class="anchor" href="#_컨피그맵_복제"></a>컨피그맵 복제</h3>
+<div class="paragraph">
+<p>컨피그맵을 다른 클러스터, 네임스페이스에 복제할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-copy.png" alt="configmap copy">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_컨피그맵_삭제"><a class="anchor" href="#_컨피그맵_삭제"></a>컨피그맵 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 컨피그맵을 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/configmap/configmap-delete.png" alt="configmap delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 컨피그맵 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_시크릿"><a class="anchor" href="#_시크릿"></a>시크릿</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>시크릿은 비밀번호, OAuth 토큰, Docker Registry , SSH 키와 같은 민감 정보를 저장하고 관리한다. 기밀 정보는
+워크로드에 정의하는 것보다 안전하고 유연하다.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>민감정보는 컨피그맵이 아닌 시크릿을 사용하여 안전하게 데이터를 저장해야한다.
+시크릿에 저장된 정보는 조회 시 base64로 인코딩되어 표시된다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_개요_2"><a class="anchor" href="#_개요_2"></a>개요</h3>
+<div class="paragraph">
+<p>배포된 시크릿의 세부 정보, 데이터, 참조 리소스, 이벤트를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-overview.png" alt="secret overview">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_세부_정보_2"><a class="anchor" href="#_세부_정보_2"></a>세부 정보</h4>
+<div class="paragraph">
+<p>시크릿에 대한 세부 정보를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-info.png" alt="secret info">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_데이터_2"><a class="anchor" href="#_데이터_2"></a>데이터</h4>
+<div class="paragraph">
+<p>시크릿의 데이터 정보를 제공하며 우측에 base64디코딩 값 보기와 복사 버튼을 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-data.png" alt="secret data">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_참조_리소스"><a class="anchor" href="#_참조_리소스"></a>참조 리소스</h4>
+<div class="paragraph">
+<p>컨피그맵과 내용이 동일하기 때문에 <a href="#config-ref-refresource">컨피그맵 참조 리소스</a>를 참고한다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_이벤트_정보"><a class="anchor" href="#_이벤트_정보"></a>이벤트 정보</h4>
+<div class="paragraph">
+<p>컨피그맵과 내용이 동일하기 때문에 <a href="#config-event-info">컨피그맵 이벤트 정보</a>를 참고한다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_토폴로지_2"><a class="anchor" href="#_토폴로지_2"></a>토폴로지</h4>
+<div class="paragraph">
+<p>시크릿과 관련된 리소스를 토폴로지 형태로 보여준다.<br>
+기본 기능은 파드와 내용이 동일하기 때문에 <a href="#pod-topology">파드 토폴로지</a>를 참고한다.<br></p>
+</div>
+<div class="paragraph">
+<p>시크릿의 토폴로지에서 출력되는 리소스는 다음과 같다.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- 시크릿
+- 파드</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-topology.png" alt="secret topology">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_시크릿_생성"><a class="anchor" href="#_시크릿_생성"></a>시크릿 생성</h3>
+<div class="paragraph">
+<p><code>+ 시크릿 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 시크릿 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-create.png" alt="secret create">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_시크릿_수정"><a class="anchor" href="#_시크릿_수정"></a>시크릿 수정</h3>
+<div class="paragraph">
+<p>수정하려는 시크릿을 선택하고 우측의 <code>수정</code> 버튼을 클릭하여 정보 수정 후 <code>시크릿 수정</code> 버튼을 클릭하여 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-fix.png" alt="secret fix">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_시크릿_복제"><a class="anchor" href="#_시크릿_복제"></a>시크릿 복제</h3>
+<div class="paragraph">
+<p>시크릿을 다른 클러스터, 네임스페이스에 복제할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-copy.png" alt="secret copy">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_시크릿_삭제"><a class="anchor" href="#_시크릿_삭제"></a>시크릿 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 시크릿을 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/secret/secret-delete.png" alt="secret delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 시크릿 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hpa"><a class="anchor" href="#_hpa"></a>HPA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HPA는 파드를 수평적으로 확장/관리하는 쿠버네티스 리소스이다. 리소스 메트릭을 기준으로 파드를 확장한다.</p>
+</div>
+<div class="sect2">
+<h3 id="_토폴로지_3"><a class="anchor" href="#_토폴로지_3"></a>토폴로지</h3>
+<div class="paragraph">
+<p>HPA과 관련된 리소스를 토폴로지 형태로 보여준다.<br>
+기본 기능은 파드와 내용이 동일하기 때문에 <a href="#pod-topology">파드 토폴로지</a>를 참고한다.<br></p>
+</div>
+<div class="paragraph">
+<p>HPA의 토폴로지에서 출력되는 리소스는 다음과 같다.<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>- HPA
+- 디플로이먼트, 레플리카셋, 스테이트풀셋
+- 파드</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/hpa/hpa-topology.png" alt="hpa topology">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_hpa_생성"><a class="anchor" href="#_hpa_생성"></a>HPA 생성</h3>
+<div class="paragraph">
+<p><code>+ HPA 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 HPA 리소스 정보를 입력하여 생성할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/hpa/hpa-create.png" alt="hpa create">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hpa_수정"><a class="anchor" href="#_hpa_수정"></a>HPA 수정</h3>
+<div class="paragraph">
+<p>수정하려는 HPA를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/hpa/hpa-fix.png" alt="hpa fix">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_hpa_삭제"><a class="anchor" href="#_hpa_삭제"></a>HPA 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 HPA를 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/hpa/hpa-delete.png" alt="hpa delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 HPA 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_리밋레인지"><a class="anchor" href="#_리밋레인지"></a>리밋레인지</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>리밋레인지는 네임스페이스에서 파드(또는 컨테이너)에 대한 리소스 할당을 제한한다. 파드(또는 컨테이너)별 최소
+및 최대 시스템 리소스(CPU 또는 메모리) 사용량을 지정하거나 스토리지클래스별 최소/최대 스토리지 요청 등을
+지정한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/limitrange/limitrange-list.png" alt="limitrange list">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_리밋레인지_생성"><a class="anchor" href="#_리밋레인지_생성"></a>리밋레인지 생성</h3>
+<div class="paragraph">
+<p><code>+ 리밋레인지 생성</code> 을 선택하면 나타나는 화면에서 쿠버네티스 리밋레인지 리소스 정보를 입력하여 생성할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/limitrange/limitrange-create.png" alt="limitrange create">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_리밋레인지_수정"><a class="anchor" href="#_리밋레인지_수정"></a>리밋레인지 수정</h3>
+<div class="paragraph">
+<p>수정하려는 리밋레인지를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_리밋레인지_삭제"><a class="anchor" href="#_리밋레인지_삭제"></a>리밋레인지 삭제</h3>
+<div class="paragraph">
+<p>삭제하려는 리밋레인지를 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/config/limitrange/limitrange-delete.png" alt="limitrange delete">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 네임스페이스와 리밋레인지 이름을 입력하여 삭제한다.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

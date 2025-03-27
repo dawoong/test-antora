@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>애플리케이션 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/cluster/application.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/cluster/application.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">애플리케이션</h1>
+<div class="sect1">
+<h2 id="cluster-catalog-template"><a class="anchor" href="#cluster-catalog-template"></a>클러스터 카탈로그 템플릿</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>사용자는 애플리케이션 메뉴의 클러스터 카탈로그 템플릿을 이용해 카탈로그를 위한 클러스터 레벨의 템플릿을 작성할 수 있다. 클러스터 레벨에서 공통으로 사용할 수 있는 카탈로그 템플릿으로 카탈로그를 생성할 때 사용된다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>네임스페이스 스코프의 카탈로그 메뉴에서 카탈로그를 생성할 때 카탈로그 템플릿을 직접 생성할 수도 있다.</p>
+</li>
+<li>
+<p>미리 카탈로그 템플릿을 만들어 두면 카탈로그를 좀 더 간단하게 생성할 수 있다.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-list.png" alt="clustercatalogtemplate list">
+</div>
+</div>
+<div class="paragraph">
+<p>표시되는 카드에 나타나는 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 카탈로그 템플릿 생성 시 등록한 이미지 표시</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">해당 클러스터 카탈로그 템플릿의 이름으로 가운데 상단에 위치</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요약</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">해당 클러스터 카탈로그 템플릿의 요약 설명으로 중앙에 위치</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">카테고리</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">카탈로그 YAML의 annotations 중 <code>ui.accordions.co.kr/category: &lt;카테고리&gt;</code> 형식으로 입력된 텍스트가 표시된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">스코프</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스 레벨인 경우 <code>네임스페이스</code> 라벨이 하단에 위치</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_템플릿_카테고리_필터_및_검색"><a class="anchor" href="#_템플릿_카테고리_필터_및_검색"></a>템플릿 카테고리 필터 및 검색</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-filter.png" alt="549" width="431">
+</div>
+</div>
+<div class="paragraph">
+<p>카탈로그 템플릿 카테고리 필터 및 검색 기능을 제공한다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>카테고리는 카탈로그 YAML의 annotations 중 <code>ui.accordions.co.kr/category: &lt;카테고리&gt;</code> 형식으로 입력된 텍스트를 기준으로 한다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_템플릿_생성"><a class="anchor" href="#_템플릿_생성"></a>템플릿 생성</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-create-btn.png" alt="clustercatalogtemplate create btn">
+</div>
+</div>
+<div class="paragraph">
+<p><code>신규 카탈로그 템플릿 생성</code> 이라는 이름을 가진 첫 번째에 위치하고 있는 카드의 <code>템플릿 생성</code> 버튼을 선택하여 새로운 템플릿을 생성할 수 있다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect3">
+<h4 id="_일반_설정"><a class="anchor" href="#_일반_설정"></a>일반 설정</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-create-1.png" alt="clustercatalogtemplate create 1">
+</div>
+</div>
+<div class="paragraph">
+<p>입력하는 카탈로그 템플릿 기본 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 카탈로그 템플릿의 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요약</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">템플릿에 대한 간단한 설명(생성 후 목록 정보에 표시)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상세 설명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">템플릿에 대한 자세한 설명(생성 후 상세 설명 버튼 선택시 표시)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">로고 이미지</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">템플릿에 대한 로고 이미지(미설정 시 템플릿의 기본 로고로 설정)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_파이프라인_설정"><a class="anchor" href="#_파이프라인_설정"></a>파이프라인 설정</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-create-3.png" alt="clustercatalogtemplate create 3">
+</div>
+</div>
+<div class="paragraph">
+<p>템플릿에 기본적으로 들어갈 파이프라인 템플릿을 설정한다. 파이프라인 템플릿은 빌드 탭의 클러스터 파이프라인 템플릿에서 생성한다.</p>
+</div>
+<div class="paragraph">
+<p>모든 설정이 끝났으면 마지막으로 우측 상단의 생성 버튼을 선택하여 템플릿을 생성한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_배포_리소스_설정"><a class="anchor" href="#_배포_리소스_설정"></a>배포 리소스 설정</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-create-2.png" alt="clustercatalogtemplate create 2">
+</div>
+</div>
+<div class="paragraph">
+<p>배포 리소스 설정은 yaml 에디터로 작성한다.
+작성해야할 항목은 세 가지이다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">values.yaml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">템플릿으로 전달되는 값을 정의한다. 해당 값은 resource.yaml 에서 사용되어진다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resource.yaml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">쿠버네티스에 배포할 리소스들에 대한 스펙을 yaml로 정의한다. 여기에서는 카탈로그에서 사용되는 환경변수와 valueschema를 사용하여 정의할 수 있다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valueschema.yaml</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resource.yaml에서 사용할 valueschema를 정의한다.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>valuschema의 사용법은 빌드 탭의 클러스터 태스크 템플릿의 valueschema를 참고한다.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_yaml"><a class="anchor" href="#_yaml"></a>YAML</h4>
+<div class="paragraph">
+<p>위 설정 탭을 이용하지 않고, YAML 탭에서 템플릿 전체를 수정할 수 있다.
+위 경우는 다른 템플릿 내용을 복사/붙여넣기 하기에 용이하다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-create-4.png" alt="clustercatalogtemplate create 4">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>다양한 템플릿들을 제공하는 <a href="https://hub.accordions.co.kr/">아코디언 허브 사이트</a> 를 운영 중으로 사이트 내의 템플릿 YAML을 복사/붙여넣기 하여 템플릿을 손쉽게 생성할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p>메인화면</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/hub.accoridons.co.kr.png" alt="hub.accoridons.co.kr">
+</div>
+</div>
+<div class="paragraph">
+<p>상세화면</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/hub.accoridons.co.kr-2.png" alt="hub.accoridons.co.kr 2">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_상세_설명"><a class="anchor" href="#_상세_설명"></a>상세 설명</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-detail-btn.png" alt="830" width="354">
+</div>
+</div>
+<div class="paragraph">
+<p>조회할 클러스터 카탈로그 템플릿 카드에 위치한 <code>상세 설명</code> 버튼을 선택하여 해당 클러스터 카탈로그 템플릿에 대한 상세 설명을 조회할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-detail.png" alt="clustercatalogtemplate detail">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_템플릿_수정"><a class="anchor" href="#_템플릿_수정"></a>템플릿 수정</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-update-btn.png" alt="clustercatalogtemplate update btn">
+</div>
+</div>
+<div class="paragraph">
+<p>기존 클러스터 카탈로그 템플릿을 수정하기 위해서는 대상 템플릿 카드의 우측 하단에 있는 <code>템플릿 수정</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-update.png" alt="clustercatalogtemplate update">
+</div>
+</div>
+<div class="paragraph">
+<p>수정하길 원하는 항목을 수정한 다음 우측 상단의 <code>수정</code> 버튼을 선택하여 템플릿 수정을 반영한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_템플릿_삭제"><a class="anchor" href="#_템플릿_삭제"></a>템플릿 삭제</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-delete-btn.png" alt="830" width="354">
+</div>
+</div>
+<div class="paragraph">
+<p>생성된 클러스터 카탈로그 템플릿을 삭제하기 위해서는 대상 템플릿 카드의 우측 상단의 <span class="image"><img src="../../../_images/menu/cluster/clustercatalogtemplate/group-button.png" alt="group button"></span> 버튼 클릭 후 <code>템플릿 삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/clustercatalogtemplate/clustercatalogtemplate-delete.png" alt="830" width="394">
+</div>
+</div>
+<div class="paragraph">
+<p>모달에서 삭제하려는 템플릿의 이름을 입력하여 삭제한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cluster-helm"><a class="anchor" href="#cluster-helm"></a>헬름</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>사용자는 애플리케이션 메뉴의 헬름을 이용해 클러스터에 애플리케이션을 배포할 수 있다. 주로 mysql, redis 와
+같이 서비스 형태의 애플리케이션을 배포할 때 사용한다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>헬름으로 배포하기 위해서는 글로벌 스코프의 <code>헬름</code> 메뉴에서 리포지터리와 차트를 설정해야 한다.</p>
+</li>
+<li>
+<p>빌드가 필요한 애플리케이션은 네임스페이스 스코프의 <code>카탈로그</code> 메뉴를 이용해 배포한다.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-list.png" alt="release list">
+</div>
+</div>
+<div class="paragraph">
+<p>제공하는 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 차트를 이용해 배포한 애플리케이션 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션을 배포한 네임스페이스</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">개정</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">업데이트 횟수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">업데이트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">업데이트 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상태</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">배포 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">차트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션 배포 시 사용한 헬름 차트</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">앱 버전</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 차트에 설정된 앱 버전</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_애플리케이션_배포"><a class="anchor" href="#_애플리케이션_배포"></a>애플리케이션 배포</h3>
+<div class="paragraph">
+<p>헬름으로 애플리케이션을 배포하기 위해서는 우측 상단의 <code>런치</code> 버튼을 선택하면 차트 목록을 조회할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/chart-list.png" alt="chart list">
+</div>
+</div>
+<div class="paragraph">
+<p>배포할 차트를 선택하면 차트의 상세 정보를 조회할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/chart-detail.png" alt="chart detail">
+</div>
+</div>
+<div class="paragraph">
+<p><code>배포하기</code> 버튼을 선택하면 배포에 필요한 값을 설정할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/chart-deploy.png" alt="chart deploy">
+</div>
+</div>
+<div class="paragraph">
+<p>좌측의 YAML 편집기에서 차트를 애플리케이션으로 배포할 때 적용할 값을 설정할 수 있다.
+우측의 <code>Target Namespace</code> 와 <code>애플리케이션명</code> 은 배포할 네임스페이스와 배포하는 애플리케이션의 이름을 설정한다.
+설정이 완료되면 좌측 상단의 <code>YAML 미리보기</code> 버튼을 눌러 배포될 쿠버네티스 리소스를 미리 확인할 수 있다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>네임스페이스 스코프의 헬름 메뉴에서 애플리케이션을 배포하는 경우 네임스페이스 선택없이 애플리케이션 이름만
+설정한다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>작성을 완료하여 <code>런치</code> 버튼을 선택하면 실제 클러스터에 애플리케이션이 배포된다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_애플리케이션_정보_조회"><a class="anchor" href="#_애플리케이션_정보_조회"></a>애플리케이션 정보 조회</h3>
+<div class="paragraph">
+<p>애플리케이션의 상세 정보를 조회하기 위해서는 애플리케이션 목록에서 대상 애플리케이션을 선택한다.
+애플리케이션 상세 화면에서는 리소스, 상태, 히스토리에 대한 정보를 확인할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-resource.png" alt="release resource">
+</div>
+</div>
+<div class="paragraph">
+<p>리소스 탭에서는 애플리케이션을 구성하는 쿠버네티스 리소스들에 대한 정보를 제공한다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+리소스 정보는 애플리케이션 구동에 필수적인 파드와 서비스 등의 정보에 대해서만 조회가 가능하다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-status.png" alt="release status">
+</div>
+</div>
+<div class="paragraph">
+<p>상태 탭에서는 설정값과 배포 상태 정보를 제공한다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-upgrade.png" alt="release upgrade">
+</div>
+</div>
+<div class="paragraph">
+<p>우측 상단의 차트 선택 후 업그레이드 버튼을 클릭해 배포된 애플리케이션을 업그레이드할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-history.png" alt="release history">
+</div>
+</div>
+<div class="paragraph">
+<p>히스토리 탭에서는 애플리케이션의 업데이트 내역 등에 대한 정보와 특정 업데이트 내역으로 회귀할 수 있는 기능을
+제공한다.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_애플리케이션_삭제"><a class="anchor" href="#_애플리케이션_삭제"></a>애플리케이션 삭제</h3>
+<div class="paragraph">
+<p>배포된 애플리케이션을 삭제하기 위해서는 대상 애플리케이션의 우측에 있는 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/menu/cluster/helm/release-delete.png" alt="release delete">
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
