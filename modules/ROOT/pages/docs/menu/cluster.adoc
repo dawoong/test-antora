@@ -1,0 +1,55 @@
+= 클러스터 메뉴
+ifndef::imagesdir[:imagesdir: ../../images]
+:leveloffset: +1
+
+include::cluster/dashboard.adoc[]
+
+<<<
+
+include::cluster/namespace.adoc[]
+
+<<<
+
+include::cluster/node.adoc[]
+
+<<<
+
+include::cluster/application.adoc[]
+
+<<<
+
+include::cluster/build.adoc[]
+
+<<<
+
+include::cluster/workload.adoc[]
+
+<<<
+
+include::cluster/config.adoc[]
+
+<<<
+
+include::cluster/network.adoc[]
+
+<<<
+
+include::cluster/storage.adoc[]
+
+<<<
+
+include::cluster/customresource.adoc[]
+
+<<<
+
+include::cluster/accesscontrol.adoc[]
+
+<<<
+
+include::cluster/monitoring.adoc[]
+
+<<<
+
+include::cluster/setting.adoc[]
+
+:leveloffset: -1

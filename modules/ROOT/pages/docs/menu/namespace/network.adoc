@@ -1,0 +1,5 @@
+= 네트워크
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+네임스페이스 스코프의 네트워크 메뉴는 클러스터 스코프의 네트워크 메뉴와 사용 방법이 동일하기 때문에 해당
+가이드를 <<cluster-network,참고>>한다.

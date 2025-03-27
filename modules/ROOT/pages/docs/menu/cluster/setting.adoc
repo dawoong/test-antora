@@ -1,0 +1,881 @@
+[[cluster-setting]]
+= 설정
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+설정은 클러스터 동작에 필요한 정보를 관리하며 클러스터 공통으로 적용된다. 이미지 저장을 위한 레지스트리 설정 및 알림 설정, 클러스터 권한을 설정할 수 있다.
+[[cluster-member]]
+== 클러스터 멤버
+
+클러스터 사용자와 그룹의 권한을 관리한다.
+
+image:menu/cluster/setting/clustermember/cluster_member_list.png[]
+
+=== 클러스터 멤버 추가
+
+사용자(또는 그룹) 목록 우측의 `추가` 버튼을 선택한다. 모달에서 사용자(또는 그룹)을 선택해 권한을 설정할 수
+있다. 설정 후에는 `저장` 버튼을 선택해야 변경 사항이 반영된다. 사용자(또는 그룹)은 다중 선택이 가능하지만
+권한은 단일 선택만이 가능하다.
+
+image:menu/cluster/setting/clustermember/cluster_member_create.png[]
+
+<<<
+
+=== 클러스터 멤버 수정
+
+사용자(또는 그룹) 우측의 `수정` 버튼으로 해당 사용자(또는 그룹)의 권한을 수정할 수 있다. 이후 상단의 `저장` 버튼을 클릭해야만 변경 사항이 반영된다.
+
+image:menu/cluster/setting/clustermember/cluster_member_update.png[]
+
+=== 클러스터 멤버 삭제
+
+사용자(또는 그룹)의 우측 `삭제` 버튼을 선택하면 멤버를 삭제할 수 있다. 이후 상단의 `저장` 버튼을 클릭해야만 변경 사항이 반영된다.
+
+image:menu/cluster/setting/clustermember/cluster_member_delete.png[]
+
+<<<
+
+== 클러스터 수신자
+클러스터 스코프의 클러스터 수신자 메뉴는 글로벌 스코프의 글로벌 수신자 메뉴와 사용 방법이 동일하기 때문에 해당 가이드를 <<global-receiver,참고>>한다.
+
+[[alert-policy]]
+== 알림 정책
+
+알림 정책은 시스템 성능에 대한 알림의 기준을 설정한다. 사용자가 정한 알림의 기준을 벗어나는 상황이 발생하게
+되는경우 사용자가 빠르게 대처할 수 있도록 알림을 발송한다. 클러스터 스코프의 알림 정책에서는 노드와 워크로드에 관련된 알림을 설정할 수 있고 
+네임스페이스 스코프의 알림 정책에서는 워크로드에 관련된 알림을 설정할 수 있다.
+
+TIP: 알림 정책의 기준은 사용자가 임의로 정의하여 설정할 수 있다.
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-overview.png[]
+
+<<<
+
+=== 알림 정책 생성
+
+`+ 알림 생성` 버튼을 선택하면 알림을 설정할 수 있는 폼이 나타난다. 폼에서 설정 정보를 입력하고 `알림 생성` 를 선택하면
+알림 정책이 생성된다. 하나의 알림 정책은 다수의 알림 규칙들을 가질 수 있으며 각 규칙은 다른 알림 대상, 알림 수준, 알림 주기, 일시 정지 등을 설정할 수 있다.
+
+==== 알림 정책
+상단부와 하단부에 위치한 알림 정책 폼에 대한 설정 내용을 설명한다.
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-create-start.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 활성화
+| 알림 정책 활성화 여부
+
+| 알림 정책명
+| 알림 정책 이름
+
+| 알림 정책 설명
+| 알림 정책에 대한 설명
+|===
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-create-end.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 알림 수준
+| 알림 경보 수준
+
+| 알림 주기
+| 알림 발송을 위한 시간을 설정
+
+====
+* 그룹 대기 시간: 처음 알림이 대기하는 시간
+* 그룹 반복 시간: 알림 발송 후 재발송되기까지 대기 시간
+* 알람 반복 시간: 알림 재발송 시간 간격
+====
+
+| 일시 정지
+| `시작일자` 혹은 `스케줄` 을 기준으로 `지속 시간` 만큼 알림 발송을 제한
+
+| 수신자 목록
+| 알림을 받을 클러스터 수신자 목록 (클러스터 수신자 메뉴에서 생성)  
+|===
+
+<<<
+
+==== 알림 규칙
+
+알림 정책에 `알림 규칙 추가` 버튼으로 복수의 알림 규칙을 생성 할 수 있으며 `알림 규칙 삭제` 버튼으로 알림 규칙을 제거할 수 있다.
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 알림 규칙 이름
+| 알림 규칙 이름
+
+| 알림 규칙 설명
+| 알림 규칙에 대한 설명
+
+| 알림 대상
+| `대상 지정` 혹은 `Query` (Prometheus Query)
+
+| 알림 수준
+| 알림 경보 수준
+
+| 알림 주기
+| 알림 발송을 위한 시간을 설정
+
+====
+* 그룹 대기 시간: 처음 알림이 대기하는 시간
+* 그룹 반복 시간: 알림 발송 후 재발송되기까지 대기 시간
+* 알람 반복 시간: 알림 재발송 시간 간격
+====
+
+| 일시 정지
+| `시작일자` 혹은 `스케줄` 을 기준으로 `지속 시간` 만큼 알림 발송을 제한
+|===
+
+ 
+- 알림 대상이 `대상 지정` 의 경우
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-rule-target-node.png[]
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-rule-label-node.png[]
+
+[%header,cols="1,3a"]
+|===
+| 오브젝트
+| `단일` 혹은 `라벨 셀렉터` 선택
+
+| 종류
+| 노드 혹은 워크로드(디플로이먼트, 스테이트풀셋, 데몬셋, 잡, 크론잡, 파드) 중 선택
+
+| 네임스페이스
+| 네임스페이스 선택
+
+| 이름
+| 오브젝트가 `단일` 의 경우 리소스 이름 선택
+
+| 라벨 셀렉터
+| 오브젝트가 `라벨 셀렉터` 의 경우 라벨 셀렉터 설정
+
+====
+- 키: 매칭 할 라벨 키 값
+- 밸류: 매칭 할 라벨 벨류 값
+====
+
+| 메트릭 타입
+| 
+
+- 노드 메트릭 타입
+
+====
+- CPU 사용률
+- 메모리 사용률
+- 디스크 사용률
+====
+
+- 워크로드 메트릭 타입
+
+====
+- CPU 사용률
+- 메모리 사용률
+- 액티브 서비스
+- 응답시간
+- Gc 시간
+====
+
+| 임계 조건
+| - 일치
+- 불일치
+- 보다 크다
+- 크거나 같다
+- 보다 작다
+- 작거나 같다
+
+| 
+| 임계 조건의 값 입력 +
+
+- % (Percent)
+
+====
+- CPU 사용률
+- 메모리 사용률
+- 디스크 사용률
+====
+
+- 개수 (Count)
+
+====
+- 액티브 서비스
+====
+
+- 초 (Second)
+
+====
+- 응답시간
+- Gc 시간
+====
+
+|===
+
+<<<
+
+- 알림 대상이 `Query` 의 경우
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-rule-query.png[]
+
+[%header,cols="1,3a"]
+|===
+
+| Query
+| Prometheus Query 입력
+
+| 임계 조건
+| - 일치
+- 불일치
+- 보다 크다
+- 크거나 같다
+- 보다 작다
+- 작거나 같다
+
+|  
+| 임계 조건의 값에 해당하는 query 혹은 숫자 입력
+
+|===
+
+<<<
+
+=== 알림 정책 수정
+
+수정하려는 알림 정책을 선택하고 `수정` 버튼을 선택한다. 
+변경할 내용을 입력 또는 선택한 후 `알림 수정` 버튼을 눌러 반영한다.
+
+=== 알림 정책 삭제
+
+삭제하려는 알림 정책을 선택하고 `삭제` 버튼을 선택한다.
+
+image:menu/cluster/setting/alertpolicy/alertpolicy-delete.png[]
+
+모달에서 알림 정책 이름을 입력하여 삭제한다.
+
+<<<
+
+== 레지스트리
+
+레지스트리는 클러스터에서 공통으로 사용할 컨테이너 이미지 저장소를 관리한다. +
+이 저장소는 클러스터에 배포된 네임스페이스에서 접근할 수 있다. +
+아코디언에서는 기본으로 인프라 레지스트리와 사용자 레지스트리를 제공한다.
+
+[TIP]
+====
+아코디언에서는 기본으로 인프라 레지스트리와 사용자 레지스트리를 제공한다.
+
+인프라 레지스트리는 아코디언 구동에 필요한 인프라 컨테이너 이미지들을 저장하는 용도이다. +
+사용자는 사용자 레지스트리만 사용한다.
+
+사설인증서 (private certificate)로 서비스하는 컨테이너 레지스트리인 경우, +
+컨테이너 런타임에서 해당 레지스트리의 SSL 인증서를 신뢰할 수 있도록 사전에 설정해야 한다. +
+설정 방법은 사용하고 있는 컨테이너 런타임 매뉴얼을 참고한다.
+====
+
+추가적으로 사용자가 외부 및 내부 레지스트리를 정의하여 사용할 수 있다. +
+아코디언에서 제공하는 레지스트리 벤더 종류 및 사용 가능한 관리 기능은 다음과 같다.
+
+image:menu/cluster/setting/registry/registry-vendor.png[]
+
+[%header,cols="1,1,1,1,1"]
+|===
+| 항목
+| (이미지, 태그)목록 조회
+| 상세 조회
+| Cosign 서명
+| 삭제
+
+| distribution
+| O
+| O
+| O
+| O
+
+| dockerhub
+| O
+| O
+| X
+| X
+
+| github
+| O
+| O
+| O
+| X
+
+| gitlab
+| O
+| O
+| O
+| O
+
+| harbor
+| O
+| O
+| O
+| O
+
+| quay
+| O
+| O
+| O
+| O
+
+| gcr
+| O
+| O
+| O
+| X
+|===
+
+<<<
+
+=== 레지스트리 목록
+
+레지스트리 메뉴 좌측에는 생성한 레지스트리들의 목록을 표시한다. +
+카드 형식으로 레지스트리의 이름과 코사인 자동서명 여부 및 추가로 등록한 검증 키의 개수를 확인할 수 있다.
+
+image:menu/cluster/setting/registry/registry-list.png[]
+
+
+=== 레지스트리 생성
+
+`+ 레지스트리 생성` 을 선택하면 레지스트리 생성 페이지로 이동한다. +
+FORM 형태로 등록하는 방법과 YAML 편집기를 통해 등록하는 방법을 지원한다. +
+레지스트리 벤더 종류마다 입력해야하는 FORM이 다르다. +
+레지스트리에서 정보와 관련된 스펙은 모두 base64 인코딩된 상태로 입력 및 저장된다.
+
+image:menu/cluster/setting/registry/registry-create.png[]
+
+<<<
+
+=== 벤더별 레지스트리 생성 (FORM)
+Distribution FORM
+
+image::menu/cluster/setting/registry/registry-distribution-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| 레지스트리 서버
+| 레지스트리 서버 주소로 Http 와 Https를 구분한다. (필수)
+
+| 사용자명
+| 레지스트리 사용자 이름 (필수)
+
+| 비밀번호
+| 비밀번호 (필수)
+|===
+
+[TIP]
+====
+레지스트리 서버 입력 예는 다음과 같다. +
+Ex) `http://registry.internal.co.kr`
+
+배포 모드 사용 시, 파이프라인/카탈로그 빌드 시, 이미지 리포지터리에 사용자명이 자동 바인딩되어 푸시된다.
+====
+
+<<<
+
+DockerHub FORM
+
+image::menu/cluster/setting/registry/registry-dockerhub-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| 사용자명
+| 레지스트리 사용자 이름 (필수)
+
+| 액세스 토큰
+| DockerHub에서 발급한 개인 액세스 토큰 (필수)
+|===
+
+[TIP]
+====
+아코디언 레지스트리에서는 DockerHub를 사용할 경우, 개인 사용자의 인증 권한에 대해서만 지원한다.
+
+액세스 토큰 발급 방법은 link:https://docs.docker.com/security/for-developers/access-tokens[다음]을 확인한다.
+====
+
+<<<
+
+GitHub FORM
+
+image::menu/cluster/setting/registry/registry-github-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| URL
+| 레지스트리 서버의 URL로 리포지터리에서 이미지 이름 이전 경로까지인 사용자 이름 또는 그룹이름까지만 입력한다.
+
+| 사용자명
+| 레지스트리 토큰 사용자 이름 (필수)
+
+| 액세스 토큰
+| GitHub에서 발급한 개인 액세스 토큰 (필수)
+
+| 조직 사용
+| 만약 레지스트리가 조직을 사용할 경우 체크한다.
+|===
+
+[TIP]
+====
+URL 입력 예는 다음과 같다. Ex) `acc`, `ghcr.io/acc`
+
+GitHub는 URL을 입력하지 않을 경우, 사용자명으로 자동 바인딩된다. Ex) `ghcr.io/사용자명`
+
+액세스 토큰 발급 방법은 link:https://docs.github.com/ko/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens[다음]을 확인한다.
+====
+
+<<<
+
+Gitlab FORM
+
+image::menu/cluster/setting/registry/registry-gitlab-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| URL
+| 관리 및 배포할 레지스트리 서버의 URL로 리포지터리에서 사용자명(또는 조직명)과 프로젝트 명까지 입력한다.
+
+| 사용자명
+| 레지스트리 토큰 사용자 이름 (필수)
+
+| 액세스 토큰
+| Gitlab에서 발급한 개인 액세스 토큰 (필수)
+|===
+
+[TIP]
+====
+URL 입력은 (사용자명 or 조직명)/(프로젝트명)으로 입력한다.
+
+Ex) `acc/test`, `registry.gitlab.com/acc/test`
+
+Gitlab은 사용자명(또는 조직명)과 프로젝트 이름을 같이 입력해야만 레지스트리 이미지를 정상적으로 조회 가능하다.
+
+액세스 토큰 발급 방법은 link:https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html[다음]을 확인한다.
+====
+
+<<<
+
+Harbor FORM
+
+image::menu/cluster/setting/registry/registry-harbor-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| 레지스트리 서버
+| 레지스트리 서버 주소로 Http 와 Https를 구분한다. (필수)
+
+| 사용자명
+| 레지스트리 사용자 이름 (필수)
+
+| 비밀번호
+| 비밀번호 (필수)
+|===
+
+[TIP]
+====
+레지스트리 서버 입력 예는 다음과 같다. +
+Ex) `http://registry.internal.co.kr`, `http://registry.internal.co.kr/acc`
+
+배포 모드를 사용 시, 선택적으로 배포할 프로젝트 스코프를 직접 지정할 수 있다. 만약 프로젝트 스코프까지 입력하지 않을 경우, 시크릿 인증 정보를 생성할 때 프로젝트 스코프는 사용자명으로 자동 바인딩된다. +
+ Ex) +
+ `http://registry.internal.co.kr` -> `http://registry.internal.co.kr/사용자명` +
+ `http://registry.internal.co.kr/acc` -> `http://registry.internal.co.kr/acc`
+====
+
+<<<
+
+Quay FORM
+
+image::menu/cluster/setting/registry/registry-quay-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| 사용자명
+| 레지스트리 사용자 이름 (필수)
+
+| 비밀번호
+| Quay에서 설정한 도커 로그인 비밀번호 (필수)
+
+| 조직 사용
+| 만약 레지스트리가 조직을 사용할 경우 체크한 뒤 조직 이름을 입력한다.
+|===
+
+[TIP]
+====
+Quay는 파이프라인/카탈로그 빌드 시, 이미지의 리포지터리에 기본적으로 사용자명 또는 조직명이 자동 바인딩된다. Ex) `quay.io/(사용자명 or 조직명)`
+====
+
+<<<
+
+Gcr FORM
+
+image::menu/cluster/setting/registry/registry-gcr-create-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리 이름 (필수)
+
+| URL
+| 레지스트리 서버의 URL로 컨테이너 레지스트리의 경우 프로젝트이름, 아티팩트 저장소인 경우 스토리지 저장소까지 입력한다.
+
+| 서비스 계정 키
+| GCP에서 발급한 개인 액세스 토큰 (필수)
+|===
+
+[TIP]
+====
+컨테이너 레지스트리를 사용하고 있는 경우, (region).gcr.io 도메인을 사용해야한다. URL에서 해당 도메인을 포함하여 프로젝트ID까지 입력해야한다. Ex) `gcr.io/accordion-0123`
+
+만약 아티팩트 레지스트리를 사용하고 있다면, (region).gcr.io를 사용하거나 (region)-docker.pkg.dev 도메인을 사용한다. URL은 도메인을 포함하여 프로젝트 ID를 포함한 스토리지 저장소까지 입력해야한다.
+
+아티팩트 레지스트리는 스토리지 저장소가 설정되어 있지 않다면 레지스트리를 이용할 수 없다.
+
+서비스 계정 권한에 대한 설정 방법은 다음을 확인한다.
+
+  * link:https://cloud.google.com/container-registry/docs/access-control?authuser=1&hl=ko[컨테이너 레지스트리]
+  * link:https://cloud.google.com/artifact-registry/docs/access-control?authuser=1&hl=ko[아티팩트 레지스트리]
+
+서비스 계정 키에 대한 발급 방법은 다음을 확인한다.
+
+  * link:https://cloud.google.com/container-registry/docs/advanced-authentication?hl=ko#json-key[컨테이너 레지스트리]
+  * link:https://cloud.google.com/artifact-registry/docs/docker/authentication?hl=ko&authuser=1#json-key[아티팩트 레지스트리]
+
+====
+
+<<<
+
+다음은 공통적으로 존재하는 FORM이다.
+
+image::menu/cluster/setting/registry/registry-create-common-form.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 접근 형태
+| 레지스트리 이용 용도에 따라 사용할 모드를 선택한다.
+====
+* 모두 사용 : 관리와 배포 기능을 모두 사용한다.
+* 관리 기능만 사용 : 컨테이너 이미지 저장소 내, 이미지 조회나 삭제와 같은 이미지 관리 기능만 사용한다.
+* 배포 기능만 사용 : 컨테이너 이미지 저장소 인증 정보 시크릿을 각 네임스페이스마다 배포하여 파이프라인/카탈로그에서 사용한다.
+====
+
+| 배포용 토큰
+| 접근 형태 모두 사용 시, 관리와 배포에 대한 인증 권한 정보를 분리하고 싶을 경우 사용한다. 해당 옵션 체크 시, 시크릿을 배포할 때 배포용 토큰 정보로 시크릿이 생성된다.
+|===
+
+
+아코디언에서 벤더의 Cosign 이미지 서명 기능을 지원할 경우, 다음과 같이 추가적인 옵션을 사용할 수 있다.
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| Cosign 자동 서명
+| 해당 옵션을 체크할 경우, 파이프라인/카탈로그 빌드 시, 이미지 서명도 함께 진행한다.
+
+| AUTO GENERATE KEY
+| Cosign 자동 서명을 사용할 경우에만 사용 가능하며, Cosign 서명키가 따로 존재하지 않을 경우, 체크하여 해당 레지스트리의 서명 키를 생성한다.
+
+| Cosign public/private key
+| Cosign 자동 서명을 사용할 경우에만 사용 가능하며, Cosign 서명키가 따로 존재할 경우, 직접 입력한다.
+
+| 외부에서 서명된 컨테이너 이미지 검증
+| Cosign 이미지 서명에 대한 검증 기능을 사용할 때, 등록한 키로 서명 검증을 할 수 있다.
+|===
+
+<<<
+  
+=== 레지스트리 생성 (YAML)
+
+image::menu/cluster/setting/registry/registry-create-common-yaml.png[]
+
+YAML 편집기로도 레지스트리 생성이 가능하다.
+YAML 편집기로 생성할 경우, 벤더의 스펙은 모두 base64 인코딩한 상태로 입력해야한다.
+
+=== 레지스트리 수정
+
+수정하려는 레지스트리를 선택하고 우측의 `수정` 버튼을 선택하여 원하는 수정 항목을 반영한다. 한번 생성한 레지스트리의 레지스트리 명과 벤더 종류는 변경할 수 없다.
+
+=== 레지스트리 삭제
+
+삭제하려는 레지스트리를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/setting/registry/registry-delete.png[]
+
+모달에서 레지스트리 이름을 입력하여 삭제한다.
+
+<<<
+
+=== 레지스트리 정보
+
+레지스트리에 대한 설정 정보를 확인할 수 있다.
+
+image::menu/cluster/setting/registry/registry-detail.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이름
+| 레지스트리의 이름이 표시된다.
+
+| 사용자명
+| 레지스트리 인증 정보의 사용자명이 표시된다.
+
+| 벤더
+| 레지스트리 벤더 종류가 표시된다.
+
+| 레지스트리 서버
+| 레지스트리 서버가 표시된다. 일부 벤더의 경우 조회 및 배포에 필요한 리포지터리 스코프까지 표시된다.
+
+| cosign 자동 서명
+| Cosign 자동 서명 여부가 표시된다.
+
+| 접근 형태
+| 레지스트리 사용 모드가 표시된다.
+
+| cosign private key
+| Cosign 서명에 사용하는 private key가 표시된다.
+
+| cosign public key
+| Cosign 서명 검증에 사용하는 public key가 표시된다.
+|===
+
+추가적으로 우측 상단에 YAML 토글 버튼을 클릭하면 YAML 스펙으로도 확인할 수 있다.
+
+image:menu/cluster/setting/registry/registry-yaml.png[]
+
+<<<
+  
+=== 이미지 (리포지터리) 목록
+
+레지스트리의 이미지 목록을 보여준다. +
+입력한 인증 권한에 맞는 이미지만 조회 가능하며, 검색 기능 사용 시 3글자 이상 입력해야 검색할 수 있다.
+
+image::menu/cluster/setting/registry/registry-image-list.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| total
+| 조회한 레지스트리의 총 이미지 수가 표시된다.
+
+| 이미지명
+| 레지스트리의 이미지 저장소 이름이 표시된다.
+
+| 태그
+| `보기` 버튼을 선택하면 레지스트리 이미지 저장소가 가지고 있는 총 태그의 수가 표시된다.
+
+| 업로드
+| 레지스트리 내 이미지를 업로드 할 수 있는 모달이 출력된다.
+|===
+
+<<<
+
+=== 이미지 업로드
+
+레지스트리 내 이미지 업로드를 지원한다.
+
+image::menu/cluster/setting/registry/registry-image-upload.png[]
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 이미지
+| 업로드 할 이미지(확장자는 `.tar`)
+
+| 리포지터리, 이미지명
+| 업로드 할 리포지터리, 이미지명
+
+| 태그명
+| 업로드할 이미지에 붙일 태그명
+
+| 포맷
+| 업로드할 이미지의 포맷(`docker` 와 `oci` 지원) +
+  업로드한 파일 포맷이 설정한 포맷과 다른 경우 업로드 실패 +
+  docker의 경우 멀티 이미지 업로드를 지원하지 않음
+|===
+
+=== 이미지 다이제스트 목록
+
+리포지터리에서 사용되는 다이제스트를 목록을 보여준다. +
+`sig 태그 감추기` 옵션을 통해 순수한 이미지 다이제스트만 목록을 호출할 수 있다. +
+(`sig 태그` 란 Cosign 시 생성되는 태그다.)
+
+image::menu/cluster/setting/registry/registry-digest-list.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 다이제스트
+| 다이제스트명
+
+| 태그
+| 다이제스트가 가지고 있는 태그의 목록
+
+| 서명 여부
+| 다이제스트의 Cosign 상태를 나타낸다. +
+  signed: 서명된 상태 +
+  unsigned: 미서명된 상태
+
+| 플랫폼
+| `manifest` 의 플랫폼 정보가 표시된다. +
+  `indexManifests` 의 경우 모든 `manifest` 의 플랫폼 정보가 표시된다.
+
+| 생성일
+| 다이제스트의 생성일. +
+  `indexManifests` 의 경우 `N/A` 로 표시된다.
+
+| 사이즈
+| 다이제스트의 사이즈. +
+  `indexManifests` 의 경우 `N/A` 로 표시된다.
+
+| image:menu/cluster/setting/registry/icon-download.png[]
+| image::menu/cluster/setting/registry/registry-digest-list-download.png[]
+  다이제스트 이미지에 대해 다운로드를 지원한다.
+  `docker` 와 `oci` 포맷을 지원하며, 해당 다이제스트의 플랫폼을 선택할 수 있다.
+  전체 플랫폼의 경우 `oci` 포맷 이미지만 지원한다.
+  태그명을 입력하지 않으면 다운로드시 다이제스트명으로 다운로드되며, 태그명을 입력할 시 해당 태그명으로 다운로드 된다.
+
+| image:menu/cluster/setting/registry/icon-cosign.png[]
+| image::menu/cluster/setting/registry/registry-digest-list-cosign.png[]
+  DockerHub를 제외한 레지스트리 중 이미지 서명 자동화를 설정한 경우 Cosign을 지원한다.
+  레지스트리가 가지고 있는 privateKey 를 이용하여 이미지 다이제스트를 Cosign 서명한다.
+  만약 indexManifests인 경우 recursive 하게 하위의 다이제스트들도 모두 서명 처리된다.
+  서명 처리된 다이제스트의 경우, 레지스트리가 가지고 있는 publicKey 또는 verifyKeys 를 이용하여 검증할 수 있다.
+
+| image:menu/cluster/setting/registry/icon-copy.png[]
+| image::menu/cluster/setting/registry/registry-digest-list-copy.png[]
+  다이제스트를 복사한다.
+  복사할 대상의 레지스트리를 선택하고 이미지명, 태그명을 변경할 수 있다.
+  태그명을 변경하지 않을 경우 기본적으로 latest 태그로 복사된다.
+  태그 덮어쓰기 를 선택한 경우 기존에 동일한 태그명이 존재할 경우 무시하고 덮어씌워진다.
+
+| image:menu/cluster/setting/registry/icon-trash.png[]
+| image::menu/cluster/setting/registry/registry-digest-list-delete.png[]
+  DockerHub, GitHub, Gcr을 제외한 벤더인 경우 삭제를 지원한다.
+  삭제하기를 선택할 경우 다이제스트를 삭제한다.
+
+|===
+
+<<<
+
+=== 문제가 있는 다이제스트의 경우
+다이제스트 내 문제가 있는 경우 경고 아이콘을 출력한다.
+해당 다이제스트는 삭제를 제외한 상세 정보 조회 및 복사 등의 추가적인 기능을 지원하지 않는다.
+삭제를 지원하지 않는 프로바이더의 또는 삭제 실패시, 아코디언에서는 삭제 처리가 불가하여 해당 프로바이더에서 삭제가 필요하다.
+
+image:menu/cluster/setting/registry/registry-digest-list-alert.png[]
+
+=== 이미지 다이제스트 정보
+다이제스트 정보를 `manifest` 기반으로 보여준다.
+
+image::menu/cluster/setting/registry/registry-detail-digest.png[]
+
+<<<
+
+=== 다이제스트 관련 동작 버튼
+
+우측 상단의 image:menu/cluster/setting/registry/icon-download.png[] 을 누르면 다이제스트 이미지를 다운로드를 위한 포맷 셀렉트 박스가 나오며, 포맷 정보를 누르면 이미지가 다운로드 된다.
+
+image::menu/cluster/setting/registry/registry-digest-download-button.png[]
+
+우측 상단의 image:menu/cluster/setting/registry/group-button.png[] 을 누르면 다이제스트에 대한 서명, 복사, 삭제에 대한 동작을 할 수 있는 셀렉트 박스가 나오며, 다이제스트 목록의 동작과 동일한 방식으로 동작된다.
+
+image::menu/cluster/setting/registry/registry-digest-group-button.png[]
+
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 다이제스트 서명
+| 다이제스트를 서명한다.
+
+| 다이제스트 복사
+| 다이제스트를 복사한다. +
+  복사할 대상의 레지스트리를 선택하고 이미지명, 태그명을 변경할 수 있다. +
+  태그명을 변경하지 않을 경우 기본적으로 `latest` 태그로 복사된다. +
+  `태그 덮어쓰기` 를 선택한 경우 기존에 동일한 태그명이 존재할 경우 무시하고 덮어씌워진다.
+
+| 다이제스트 삭제
+| 다이제스트를 삭제한다.
+|===
+
+<<<
+
+==== Layers 및 Command
+
+Layers의 Row를 선택하면 우측 Command에 선택한 Layer의 Command 전체 내용이 출력된다.
+
+image::menu/cluster/setting/registry/registry-detail-layer.png[]
+
+=== 리포지터리 태그 정보
+
+리포지터리 태그 정보는 다이제스트 정보와 거의 동일한 화면을 보여준다. +
+추가적으로 해당 태그의 `digest` 만 별도로 표시된다.
+
+image::menu/cluster/setting/registry/registry-detail-tag.png[]
+
+<<<

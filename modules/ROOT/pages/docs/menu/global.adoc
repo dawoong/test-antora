@@ -1,0 +1,23 @@
+= 글로벌 메뉴
+ifndef::imagesdir[:imagesdir: ../../images]
+:leveloffset: +1
+
+include::global/dashboard.adoc[]
+
+<<<
+
+include::global/cluster.adoc[]
+
+<<<
+
+include::global/helm.adoc[]
+
+<<<
+
+include::global/account.adoc[]
+
+<<<
+
+include::global/setting.adoc[]
+
+:leveloffset: -1

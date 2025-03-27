@@ -1,0 +1,277 @@
+[[cluster-config]]
+= 구성
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+컨피그맵과 시크릿은 애플리케이션(또는 워크로드)가 정상적으로 실행되기 위해 필요한 구성요소 정보를 저장한다.
+그 외에도 오토스케일 설정을 위한 HPA와 리소스 제한을 위한 리밋레인지 설정을 할 수 있다.
+
+== 컨피그맵
+
+컨피그맵은 키-값 쌍으로 기밀이 아닌 데이터를 저장한다.
+
+=== 개요
+
+배포된 컨피그맵의 세부 정보, 데이터, 이진 데이터, 참조 리소스, 이벤트를 제공한다.
+
+image::menu/cluster/config/configmap/configmap-overview.png[]
+
+==== 세부 정보
+
+컨피그맵에 대한 세부 정보를 제공한다.
+
+image::menu/cluster/config/configmap/configmap-info.png[]
+
+<<<
+
+==== 데이터
+
+컨피그맵의 데이터 정보를 제공하며 우측에 복사 버튼을 제공한다.
+
+image::menu/cluster/config/configmap/configmap-data.png[]
+
+==== 이진 데이터
+
+컨피그맵의 이진 데이터 정보를 제공하며 우측에 미리보기와 다운로드 버튼을 제공한다.
+
+image::menu/cluster/config/configmap/configmap-binarydata.png[]
+
+[[config-ref-refresource]]
+==== 참조 리소스
+
+컨피그맵의 참조 리소스 정보를 제공하며 클릭 시 해당 리소스로 이동된다.
+
+image::menu/cluster/config/configmap/configmap-refresource.png[]
+
+[[config-event-info]]
+==== 이벤트 정보
+
+컨피그맵에서 발생하는 이벤트 정보를 제공한다.
+
+image::menu/cluster/config/configmap/configmap-event.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 타입
+| 이벤트 타입
+
+* Normal: 일반적인 작업으로 발생된 이벤트
+
+* Warning: 오류에 의해 발생된 이벤트
+
+| 메시지
+| 이벤트 메시지
+
+| 원인
+| 이벤트 발생 이유
+
+| 생성된 시간
+| 이벤트 생성 후 지난 시간
+
+|===
+
+<<<
+
+==== 토폴로지
+
+컨피그맵과 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+컨피그맵의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- 컨피그맵
+- 파드
+----
+
+image::menu/cluster/config/configmap/configmap-topology.png[]
+
+=== 컨피그맵 생성
+
+`+ 컨피그맵 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 컨피그맵 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.
+
+image::menu/cluster/config/configmap/configmap-create.png[]
+
+=== 컨피그맵 수정
+
+수정하려는 컨피그맵을 선택하고 우측의 `수정` 버튼을 클릭하여 정보 수정 후 `컨피그맵 수정` 버튼을 클릭하여 반영한다.
+
+image::menu/cluster/config/configmap/configmap-fix.png[]
+
+=== 컨피그맵 복제
+
+컨피그맵을 다른 클러스터, 네임스페이스에 복제할 수 있다.
+
+image::menu/cluster/config/configmap/configmap-copy.png[]
+
+<<<
+
+=== 컨피그맵 삭제
+
+삭제하려는 컨피그맵을 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/config/configmap/configmap-delete.png[]
+
+모달에서 네임스페이스와 컨피그맵 이름을 입력하여 삭제한다.
+
+<<<
+
+== 시크릿
+
+시크릿은 비밀번호, OAuth 토큰, Docker Registry , SSH 키와 같은 민감 정보를 저장하고 관리한다. 기밀 정보는
+워크로드에 정의하는 것보다 안전하고 유연하다.
+
+[IMPORTANT]
+====
+민감정보는 컨피그맵이 아닌 시크릿을 사용하여 안전하게 데이터를 저장해야한다.
+시크릿에 저장된 정보는 조회 시 base64로 인코딩되어 표시된다.
+====
+
+=== 개요
+
+배포된 시크릿의 세부 정보, 데이터, 참조 리소스, 이벤트를 제공한다.
+
+image::menu/cluster/config/secret/secret-overview.png[]
+
+==== 세부 정보
+
+시크릿에 대한 세부 정보를 제공한다.
+
+image::menu/cluster/config/secret/secret-info.png[]
+
+<<<
+
+==== 데이터
+
+시크릿의 데이터 정보를 제공하며 우측에 base64디코딩 값 보기와 복사 버튼을 제공한다.
+
+image::menu/cluster/config/secret/secret-data.png[]
+
+==== 참조 리소스
+
+컨피그맵과 내용이 동일하기 때문에 <<config-ref-refresource,컨피그맵 참조 리소스>>를 참고한다.
+
+==== 이벤트 정보
+
+컨피그맵과 내용이 동일하기 때문에 <<config-event-info,컨피그맵 이벤트 정보>>를 참고한다.
+
+==== 토폴로지
+
+시크릿과 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+시크릿의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- 시크릿
+- 파드
+----
+
+image::menu/cluster/config/secret/secret-topology.png[]
+
+<<<
+
+=== 시크릿 생성
+
+`+ 시크릿 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 시크릿 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.
+
+image::menu/cluster/config/secret/secret-create.png[]
+
+=== 시크릿 수정
+
+수정하려는 시크릿을 선택하고 우측의 `수정` 버튼을 클릭하여 정보 수정 후 `시크릿 수정` 버튼을 클릭하여 반영한다.
+
+image::menu/cluster/config/secret/secret-fix.png[]
+
+<<<
+
+=== 시크릿 복제
+
+시크릿을 다른 클러스터, 네임스페이스에 복제할 수 있다.
+
+image::menu/cluster/config/secret/secret-copy.png[]
+
+=== 시크릿 삭제
+
+삭제하려는 시크릿을 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/config/secret/secret-delete.png[]
+
+모달에서 네임스페이스와 시크릿 이름을 입력하여 삭제한다.
+
+<<<
+
+== HPA
+
+HPA는 파드를 수평적으로 확장/관리하는 쿠버네티스 리소스이다. 리소스 메트릭을 기준으로 파드를 확장한다.
+
+=== 토폴로지
+
+HPA과 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+HPA의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- HPA
+- 디플로이먼트, 레플리카셋, 스테이트풀셋
+- 파드
+----
+
+image::menu/cluster/config/hpa/hpa-topology.png[]
+
+<<<
+
+=== HPA 생성
+
+`+ HPA 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 HPA 리소스 정보를 입력하여 생성할 수 있다.
+
+image::menu/cluster/config/hpa/hpa-create.png[]
+
+=== HPA 수정
+
+수정하려는 HPA를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+
+image::menu/cluster/config/hpa/hpa-fix.png[]
+
+<<<
+
+=== HPA 삭제
+
+삭제하려는 HPA를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/config/hpa/hpa-delete.png[]
+
+모달에서 네임스페이스와 HPA 이름을 입력하여 삭제한다.
+
+<<<
+
+== 리밋레인지
+
+리밋레인지는 네임스페이스에서 파드(또는 컨테이너)에 대한 리소스 할당을 제한한다. 파드(또는 컨테이너)별 최소
+및 최대 시스템 리소스(CPU 또는 메모리) 사용량을 지정하거나 스토리지클래스별 최소/최대 스토리지 요청 등을
+지정한다.
+
+image::menu/cluster/config/limitrange/limitrange-list.png[]
+
+=== 리밋레인지 생성
+
+`+ 리밋레인지 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 리밋레인지 리소스 정보를 입력하여 생성할 수 있다.
+
+image::menu/cluster/config/limitrange/limitrange-create.png[]
+
+<<<
+
+=== 리밋레인지 수정
+
+수정하려는 리밋레인지를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+
+=== 리밋레인지 삭제
+
+삭제하려는 리밋레인지를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/config/limitrange/limitrange-delete.png[]
+
+모달에서 네임스페이스와 리밋레인지 이름을 입력하여 삭제한다.

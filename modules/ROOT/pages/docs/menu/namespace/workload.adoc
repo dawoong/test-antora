@@ -1,0 +1,5 @@
+= 워크로드
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+네임스페이스 스코프의 워크로드 메뉴는 클러스터 스코프의 워크로드 메뉴와 사용 방법이 동일하기 때문에 해당
+가이드를 <<cluster-workload,참고>>한다.

@@ -1,0 +1,1039 @@
+
+= 빌드
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+[[cluster-build]]
+
+== 클러스터 태스크 템플릿
+
+클러스터 태스크 템플릿에서는 클러스터에서 공통으로 사용할 템플릿을 관리한다.
+
+파이프라인에서 자주 사용되는 태스크 사양을 미리 템플릿으로 등록하여 쉽게 적용할 수 있다.
+
+태스크 템플릿을 만들 때는 *valueschema* 와 *환경변수* 를 사용한다.
+
+*valueschema* 는 사용자에게 입력받을 값(value)에 대한 형식의 정의할 수 있으며, 템플릿을 유연하게 만들 수 있다.
+
+데이터 형식에 따라 크게 3가지 유형으로 세부 타입은 아래와 같다.
+
+- *기본* : 리터럴 데이터
+- *쿠버네티스* : 쿠버네티스 리소스
+- *참조* : 다른 스키마를 포함
+
+[%header,cols="1,1,3"]
+|===
+| 유형
+| 종류
+| 설명
+
+| 기본
+| boolean
+| true, false
+
+| 기본
+| number
+| 숫자 형식
+
+| 기본
+| string
+| 문자열 형식
+
+| 쿠버네티스
+| kubernetes
+| 범용적으로 사용할 수 있는 것으로 쿠버네티스 리소스를 참조
+
+| 쿠버네티스
+| configmapName
+| configmap존재 여부만 확인하며, metadata.name을 참조
+
+| 쿠버네티스
+| configmapData
+| configmap의 data의 요소를 참조
+
+| 쿠버네티스
+| secretName
+| secret존재 여부만 확인하며, metadata.name을 참조
+
+| 쿠버네티스
+| secretData
+| secret의 data의 요소를 참조
+
+| 참조
+| array
+| 동일한 유형의 객체를 포함
+
+| 참조
+| object
+| 다른 객체를 포함하는 유형
+
+| 참조
+| anyOf
+| 유형 중에 하나 일치
+|===
+
+=== 환경변수
+
+파이프라인에서 예약된 환경변수는 다음과 같다. 사용 방법은 `acc-showcase-env` 파이프라인 템플릿 참고한다.
+
+[%header,cols="1,2"]
+|====
+| 의미
+| 환경변수 표현식
+
+| 파이프라인 이름
+| `{{{.PIPELINE.NAME}}}`
+
+| 파이프라인 네임스페이스
+| `{{{.PIPELINE.NAMESPACE}}}`
+
+| 파이프라인 UID
+| `{{{.PIPELINE.UID}}}`
+
+| 파이프라인 인스턴스 이름
+| `{{{.PIPELINE.INSTANCE}}}`
+
+| 빌드 이름
+| `{{{.BUILD.NAME}}}`
+
+| 빌드 버전
+| `{{{.BUILD.VERSION}}}`
+
+| 빌드 생성자 이름
+| `{{{.BUILD.CREATOR.USERNAME}}}`
+
+| 빌드 생성자 그룹
+| `{{{.BUILD.CREATOR.GROUPS}}}`
+|====
+
+<<<
+
+=== valueschema의 기본 유형
+
+==== boolean
+
+입력값을 불리언 형식으로 제한한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "bVal: {{.values.bVal}}";
+        echo -e "bDefaultVal: {{.values.bDefaultVal}}";
+        echo -e "bEnumVal: {{.values.bEnumVal}}";
+  valueschema:
+    type: object
+    properties:
+      bVal:
+        type: boolean
+        description: "기본형: boolean타입"
+      bDefaultVal:
+        type: boolean
+        description: "기본값이 있는 boolean타입"
+        default: true
+      bEnumVal:
+        type: boolean
+        description: "boolean 타입, enum : 값의 범위 지정"
+        enum:
+          - true
+----
+
+image::menu/cluster/build/valueschema-boolean.png[]
+
+<<<
+
+==== number
+
+입력값을 숫자 형식으로 제한한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "nVal: {{.values.nVal}}";
+        echo -e "nDefaultVal: {{.values.nDefaultVal}}";
+  valueschema:
+    type: object
+    properties:
+      nVal:
+        type: number
+        description: "기본형: number타입"
+        maximum: 100 # (옵션) 해당 값보다 크다면 오류
+        minimum: 1   # (옵션) 해당 값보다 작다면 오류
+      nDefaultVal:
+        type: number
+        description: "기본값이 있는 number타입"
+        default: -1
+----
+
+image::menu/cluster/build/valueschema-number.png[]
+
+<<<
+
+==== string
+
+입력값을 문자열 형식으로 정의하고, 다양한 포맷을 이용하여 제한할 수 있다.
+
+[%header,cols="1,3"]
+|===
+| 종류
+| 설명
+
+| date
+| 날짜형식 (YYYY-MM-DD)
+
+| email
+| 이메일 형식
+
+| ip
+| ipv4 형식
+
+| uri
+| uri 형식
+
+| uuid
+| uuid 형식
+
+| ssh-private
+| SSH PEM PRIVATE 형식
+
+| ssh-public
+| ssh-rsa xxxx accordion@example.com
+
+| textarea
+| 일반적인 형식의 멀티라인
+|===
+
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "date : {{.values.date}}";
+        echo -e "email : {{.values.email}}";
+        echo -e "ip : {{.values.ip}}";
+        echo -e "uri : {{.values.uri}}";
+        echo -e "uuid : {{.values.uuid}}";
+        echo -e "textarea : {{.values.textarea}}";
+        echo -e "sshPublic : {{.values.sshPublic}}";
+  valueschema:
+    type: object
+    properties:
+      date:
+        type: string
+        description: "date 형식 (YYYY-MM-DD)"
+        format: date
+      email:
+        type: string
+        description: "email 형식"
+        format: email
+      ip:
+        type: string
+        description: "ip 형식"
+        format: ip
+      uri:
+        type: string
+        description: "uri 형식"
+        format: uri
+      uuid:
+        type: string
+        description: "uuid 형식"
+        format: uuid
+      textarea:
+        type: string
+        description: "멀티라인 형식 지원"
+        format: textarea
+      sshPublic:
+        type: string
+        description: "ssh public 형식"
+        format: ssh-public
+----
+
+image::menu/cluster/build/valueschema-string.png[]
+
+<<<
+
+=== valueschema의 쿠버네티스 유형
+
+==== kubernetes
+
+입력값을 쿠버네티스 리소스를 선택하도록 한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "kVal: {{.values.kVal}}";
+  valueschema:
+    type: object
+    properties:
+      kVal:
+        type: kubernetes
+        description: "kubernetes의 값을 참조"
+        x-kube-group: "cicd.accordions.co.kr" # (필수) 쿠버네티스 리소스의 그룹 의미
+        x-kube-version: "v1beta1"             # (필수) 쿠버네티스 리소스의 버전 의미
+        x-kube-resource: "tasktemplates"      # (필수) 쿠버네티스 리소스의 리소스명 의미
+        x-kube-namespace: "namespace 이름"     # (옵션) 쿠버네티스 리소스의 네임스페이스 의미
+        x-kube-fields: "metadata.name"        # (옵션) jsonpath 유사한 형식으로 "{}" 는 생략 가능
+        x-kube-optional: true                 # (옵션) true이면서 사용자 입력값이 없다면 공백("")
+----
+
+image::menu/cluster/build/valueschema-kubernetes.png[]
+
+<<<
+
+==== configmapData
+
+입력값을 `configmap` 리소스를 선택하도록 하며, `data` 필드를 참조한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "cmData: {{.values.cmVal}}";
+  valueschema:
+    type: object
+    properties:
+      cmVal:
+        type: configmapData
+        description: "configmap.data의 값을 참조"
+        x-kube-key: "strkey"                  # (옵션) 해당값이 없다면, data전체를 json직렬화
+        x-kube-optional: true                 # (옵션) true이면서 사용자 입력값이 없다면 공백("")
+----
+
+image::menu/cluster/build/valueschema-configmapdata.png[]
+
+<<<
+
+==== configmapName
+
+입력값을 `configmap` 리소스를 선택하도록 하며, `metadata.name` 값을 참조한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "cmName: {{.values.cmNameVal}}";
+  valueschema:
+    type: object
+    properties:
+      cmNameVal:
+        type: configmapName
+        description: "configmap의 이름을 참조"
+        x-kube-labelSelector: ""              # (옵션) 라벨 셀렉터
+        x-kube-optional: true                 # (옵션) true이면서 사용자 입력값이 없다면 공백("")
+----
+
+image::menu/cluster/build/valueschema-configmapname.png[]
+
+<<<
+
+==== secretData
+
+입력값을 `secret` 리소스를 선택하도록 하며, `data` 필드의 디코딩 값을 참조한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "secretData: {{.values.secretVal}}";
+  valueschema:
+    type: object
+    properties:
+      secretVal:
+        type: secretData
+        description: "secret.data의 값을 참조"
+        x-kube-key: "username"                  # (옵션) 해당값이 없다면, data전체를 json직렬화
+        x-kube-type: "kubernetes.io/basic-auth" # (옵션) scecret.type과 일치하는지 유효성 검사
+        x-kube-labelSelector: ""                # (옵션) 라벨 셀렉터
+        x-kube-optional: true                   # (옵션) true이면서 사용자 입력값이 없다면 공백("")
+----
+
+image::menu/cluster/build/valueschema-secretdata.png[]
+
+<<<
+
+==== secretName
+
+입력값을 `secret` 리소스를 선택하도록 하며, `metadata.name` 값을 참조한다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "secretName: {{.values.secretNameVal}}";
+  valueschema:
+    type: object
+    properties:
+      secretNameVal:
+        type: secretName
+        description: "secret의 이름을 참조"
+        x-kube-type: "kubernetes.io/basic-auth" # (옵션) scecret.type과 일치하는지 유효성 검사
+        x-kube-labelSelector: ""                # (옵션) 라벨 셀렉터
+        x-kube-optional: true                   # (옵션) true이면서 사용자 입력값이 없다면 공백("")
+----
+
+image::menu/cluster/build/valueschema-secretname.png[]
+
+<<<
+
+=== valueschema의 참조 유형
+
+==== array
+
+입력값을 배열 형식으로 받는다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "numArr: {{.values.numArr}}";
+        echo -e "strArr: {{.values.strArr}}";
+        {{- range $i, $e:= .values.strArr}}
+        {{print "echo -e \"\telement[" $i "]: " $e "\";"}}
+        {{- end}}
+        echo -e "uniqueArr: {{.values.uniqueArr}}";
+  valueschema:
+    type: object
+    properties:
+      numArr:
+        type: array
+        description: "숫자 배열"
+        items:
+          type: number
+      strArr:
+        type: array
+        minItems: 1
+        maxItems: 3
+        description: "문자 배열 (1~3)"
+        items:
+          type: string
+      uniqueArr:
+        type: array
+        description: "중복 요소가 없는 배열"
+        uniqueItems: true
+        items:
+          type: string
+----
+
+image::menu/cluster/build/valueschema-array.png[]
+
+<<<
+
+==== object
+
+입력값을 오브젝트 형식으로 받는다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        echo -e "data.key: {{.values.data.key}}";
+        echo -e "data.value: {{.values.data.value}}";
+  valueschema:
+    type: object
+    properties:
+      data:
+        type: object
+        properties:
+          key:
+            type: string
+          value:
+            type: string
+----
+
+image::menu/cluster/build/valueschema-object.png[]
+
+<<<
+
+==== anyof
+
+입력값을 두 객체 중에 하나를 선택하는 방식으로 받는다.
+
+[source,yaml]
+----
+spec:
+  container:
+    image: busybox
+    command:
+      - sh
+      - -c
+    args:
+      - |
+        {{- if eq .values.secret.type "kubernetes.io/basic-auth"}}
+        {{print "echo \"" .values.secret.type "\";"}}
+        {{print "echo \"" .values.secret.username "\";"}}
+        {{print "echo \"" .values.secret.password "\";"}}
+
+        {{- else if eq .values.secret.type "kubernetes.io/ssh-auth"}}
+        {{print "echo \"" .values.secret.type "\";"}}
+        {{print "echo \"" .values.secret.privatekey "\";"}}
+        {{- end}}
+  valueschema:
+    type: object
+    properties:
+      secret:
+        anyOf:
+        - title: basic
+          properties:
+            type:
+              type: string
+              enum:
+              - kubernetes.io/basic-auth
+            username:
+              type: string
+            password:
+              type: string
+        - title: ssh
+          properties:
+            type:
+              type: string
+              enum:
+              - kubernetes.io/ssh-auth
+            privatekey:
+              type: string
+              format: ssh-private
+----
+
+image::menu/cluster/build/valueschema-anyof.png[]
+
+<<<
+
+=== valueschema의 UI 옵션 정의
+
+==== x-ui-format
+UI에 대한 표현 방식을 정의한다. (기본값: list)
+
+
+* list
+** 기본 목록 방식으로 각 properties를 행마다 표시한다.
+
+image::menu/cluster/build/valueschema-ui-list.png[]
+
+* table
+** 테이블 방식으로 각 properties를 열마다 표시한다.
+*** 세부 옵션
+**** `x-ui-table-width`
+***** `x-ui-format: table` 인 경우에만 옵션 적용된다.
+***** 각 숫자는 컬럼의 비율을 의미한다.
+***** properties 개수와 일치하지 않으면 해당 옵션 필드는 무시된다.
+
+====
+사용 예시 1: 포트 설정
+
+[source,yaml]
+----
+ports:
+  description: 포트 설정
+  items:
+    properties:
+      containerPort:
+        maximum: 65535
+        minimum: 1
+        multipleOf: 1
+        type: number
+      name:
+        default: ""
+        type: string
+      nodePort:
+        default: 0
+        maximum: 65535
+        minimum: 0
+        multipleOf: 1
+        type: number
+      protocol:
+        default: TCP
+        enum:
+          - TCP
+          - UDP
+          - SCTP
+        type: string
+      servicePort:
+        maximum: 65535
+        minimum: 1
+        multipleOf: 1
+        type: number
+    type: object
+  type: array
+  x-ui-format: table
+  x-ui-table-width: 4 2 2 2 2
+----
+
+image::menu/cluster/build/valueschema-ui-table.png[]
+
+위처럼 각 `property` 가 한 행으로 지정한 비율에 맞추어 표시된다.
+
+====
+
+====
+사용 예시 2: Labels 설정
+
+[source,yaml]
+----
+labels:
+  items:
+    properties:
+      key:
+        pattern: ([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9]
+        type: string
+      value:
+        default: ""
+        pattern: (([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?
+        type: string
+    type: object
+    x-ui-displayName: 라벨
+  type: array
+  x-ui-basic-option: true
+  x-ui-displayName: 라벨
+  x-ui-format: table
+----
+
+image::menu/cluster/build/valueschema-ui-labels.png[]
+
+자주 사용되는 key-value 형태의 UI 형식으로 labels, annotations 등에 사용된다.
+
+====
+
+  * count
+  ** `type: number` 인 경우 사용 가능한 옵션으로, 해당 필드의 숫자를 변경할 수 있는 UI를 제공한다.
+
+====
+사용 예시: Replicas 설정
+
+[source,yaml]
+----
+replicas:
+  default: 1
+  minimum: 0
+  type: number
+  x-ui-format: count
+  x-ui-displayName: 레플리카 파드 수
+----
+
+image::menu/cluster/build/valueschema-ui-count.png[]
+
+====
+
+  * switch
+  ** `type: boolean` 인 경우 사용 가능한 옵션으로, 해당 필드의 boolean 값을 변경할 수 있는 UI를 제공한다.
+
+====
+사용 예시: ReadOnly 설정
+
+[source,yaml]
+----
+readOnly:
+  default: false
+  type: boolean
+  x-ui-format: switch
+----
+
+image::menu/cluster/build/valueschema-ui-switch.png[]
+
+====
+
+  * radio
+  ** `type: string` 과 `enum` 이 존재 하는 경우 사용 가능한 옵션으로, enum 목록으로 정의된 값을 선택할 수 있는 UI를 제공한다.
+
+====
+사용 예시: ImagePullPolicy 설정
+
+[source,yaml]
+----
+imagePullPolicy:
+  default: Always
+  description: 이미지를 가져오는 전략
+  enum:
+    - Always
+    - IfNotPresent
+    - Never
+  type: string
+  x-ui-format: radio
+----
+
+image::menu/cluster/build/valueschema-ui-radio.png[]
+
+====
+
+==== x-ui-collapsable
+Collapse, Expand 버튼이 표시되어, 해당 기본값을 지정할 수 있는 옵션을 정의한다.
+
+- true: 숨김
+- false: 표시
+
+====
+사용 예시
+
+[source,yaml]
+----
+ports:
+    ...
+    x-ui-collapsable: true
+----
+
+image::menu/cluster/build/valueschema-ui-collapsable.png[]
+====
+
+==== x-ui-order
+기본은 알파벳순으로 정렬이 되며, 사용자가 UI 배치 변경을 위한 옵션을 정의한다.
+
+====
+사용 예시
+
+[source,yaml]
+----
+propertyA:
+  type: string
+  x-ui-order: 2
+propertyB:
+  type: string
+  x-ui-order: 1
+----
+
+image::menu/cluster/build/valueschema-ui-order.png[]
+
+위처럼 알파벳순이 아닌 사용자가 정의한 순서대로 UI가 표시된다.
+
+====
+
+==== x-ui-basic-option
+카탈로그 생성시 기본으로 표시되는 UI를 정의한다.
+
+- true: 생성시, 기본 설정에서 표시
+- false: 생성시, 기본 설정에서 미표시 (전체 설정에서만 표시)
+
+====
+사용 예시
+
+[source,yaml]
+----
+ports:
+  ...
+  x-ui-basic-option: true
+----
+
+====
+
+==== x-ui-displayName
+key 값이 표시되는 UI의 이름을 정의한다.
+
+====
+사용 예시
+
+[source,yaml]
+----
+ports:
+  ...
+  x-ui-displayName: 포트 설정
+----
+
+====
+
+==== x-ui-display
+UI 표시/숨김을 위한 옵션을 정의한다.
+
+- `visible`: UI를 표시한다.
+- `hidden`: UI를 숨김 처리한다.
+
+==== x-ui-type: kubernetes
+`type: string` 인 경우만 지원한다.
+사용자의 특정 쿠버네티스 목록을 UI로 제공하기 위한 옵션이다.
+
+[NOTE]
+====
+`type: kubernetes` 에서 사용되는 `x-kube-` 와 다른 옵션이다.
+`x-ui-type-` 옵션의 경우는 CICD 모듈과 관계되지 않고 사용자 UI에만 영향 미치는 옵션이다.
+====
+
+세부 옵션
+
+[%header,cols="1,3"]
+|===
+| 옵션 | 설명
+
+| `x-ui-kube-resource`
+| 리소스명
+
+| `x-ui-kube-group`
+| 리소스 그룹 (기본값: core) +
+
+- 예시: `apps`, `storage.k8s.io`
+
+| `x-ui-kube-version`
+| 리소스 버전 (기본값: v1) +
+
+- 예시: `v1beta1`, `v2`, `v2beta2`
+
+| `x-ui-kube-scope`
+| 쿠버네티스 리소스의 스코프(cluster, namespace)를 정의한다. +
+
+- `cluster`: 클러스터 스코프의 리소스 +
+
+- `namespace`: 네임스페이스 스코프의 리소스 (기본값) +
+
+| `x-ui-kube-fields`
+| (필수값) UI 목록으로 표시할 리소스의 참조 필드 +
+
+- 기본적으로 `metadata.name` 을 정의하는 것을 권장한다.
+
+| `x-ui-kube-labelSelector`
+| 리소스 목록 요청시 전달되는 라벨 셀렉터
+
+|===
+
+<<<
+
+====
+
+사용 예시
+
+RESOURCE YAML
+
+[source,yaml]
+----
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{{.CATALOG.NAME}}}
+spec:
+  accessModes:
+  - {{.values.accessMode}}
+  resources:
+    requests:
+      storage: {{.values.size}}
+  storageClassName: {{.values.storageClass}}
+  volumeMode: Filesystem
+----
+
+VALUESCHEMA YAML
+
+[source,yaml]
+----
+properties:
+  accessMode:
+    type: string
+  size:
+    type: string
+  storageClass:
+    description: 스토리지 클래스
+    type: string
+    x-ui-kube-fields: metadata.name
+    x-ui-kube-group: storage.k8s.io
+    x-ui-kube-labelSelector: ''
+    x-ui-kube-resource: storageclasses
+    x-ui-kube-scope: cluster
+    x-ui-kube-version: v1
+    x-ui-type: kubernetes
+type: object
+
+----
+
+image::menu/cluster/build/valueschema-ui-kube.png[]
+
+위처럼 사용가능한 스토리지 클래스 목록이 표시된다.
+
+====
+
+<<<
+
+== 클러스터 파이프라인 템플릿
+
+클러스터 파이프라인 템플릿에서는 클러스터에서 공통으로 사용할 파이프라인을 관리한다.
+
+카탈로그에서 자주 사용되는 파이프라인 사양을 미리 템플릿으로 등록하여 쉽게 적용할 수 있다.
+
+클러스터 파이프라인 템플릿을 만들 때는 클러스터 태스크 템플릿을 사용하며
+
+2개 이상의 클러스터 태스크 템플릿을 조합하는 경우 클러스터 태스크 템플릿들의 연관관계 설정이 필요하다.
+
+
+=== 클러스터 파이프라인 템플릿 생성
+
+`+ 클러스터 파이프라인 템플릿 생성` 버튼을 선택하면 나타나는 화면에서 클러스터 파이프라인 템플릿 yaml 정보를 입력하여 생성할 수 있다.
+
+image::menu/cluster/build/pipeline-template-create.png[]
+
+[source,yaml]
+----
+apiVersion: cicd.accordions.co.kr/v1beta1
+kind: ClusterPipelineTemplate
+metadata:
+  annotations:
+    # 해당 클러스터 파이프라인 템플릿의 요약
+    accordions.co.kr/summary: ""
+    # 해당 클러스터 파이프라인 템플릿의 설명
+    accordions.co.kr/description: ""
+  name: "test01"
+spec:
+  tasks:
+    - name: vcs-get
+      templateRef:
+        clusterScope: true
+        name: acc-vcs-git
+    - depends: vcs-get.Succeeded
+      name: image-build
+      templateRef:
+        clusterScope: true
+        name: acc-image-kaniko
+----
+
+태스크에 대한 스펙을 작성할때에는 이름과 다른 태스크와의 연관관계를 설정하고 상세정보는 태스크 템플릿을
+기반으로 작성한다.
+
+태스크의 이름은 쿠버네티스 이름 정책에 맞춰 작성하고 태스크의 연관관계는 해당 태스크을 수행하는 조건에 대한
+정보를 입력한다. 이는 `{이름}.{상태}` 의 형식으로 입력할 수 있다. 상태에 입력할 수 있는 값은 다음과 같다.
+
+[%header,cols="1,3"]
+|===
+| 상태
+| 설명
+
+| Terminated
+| 사용자가 빌드를 중지한 상태
+
+| Succeeded
+| 태스크가 수행하고 종료코드(exit code)가 0으로 완료된 상태
+
+| Running
+| 태스크가 수행되고 있는 상태
+
+| Failed
+| 태스크가 수행되었지만 종료코드가 0이 아닌 것으로 완료된 상태
+
+| Error
+| 태스크가 실행되지 못하거나 비정상 종료된 상태
+
+| Pending
+| 태스크가 수행 전 대기하는 상태
+
+| Unknown
+| 알수 없는 문제로 종료된 상태
+|===
+
+연관관계 작성 방법은 다음과 같다.
+
+* 태스크의 `{이름}.{상태}` 형식으로 입력하며 상태는 필수로 입력해야 한다.
+* `&&`, `||` 를 추가하여 논리적인 표현도 작성 가능하다.
+** `&&` 는 and 를 뜻하는 표현으로 `A.{상태} && B.{상태}` 인 경우 A 상태와 B 상태 모두인 경우를 표현한다.
+** `||` 는 or 를 뜻하는 표현으로 `A.{상태} || B.{상태}` 인 경우 A 상태 또는 B 상태 중 하나를 표현 한다.
+* `({이름}.{상태} || {이름}.{상태}) && {이름}.{상태}` 와 같은 우선순위 지정도 가능하다.
+
+[source,yaml]
+----
+spec:
+  tasks:
+    - name: vcs-get
+      templateRef:
+        clusterScope: true
+        name: acc-vcs-git
+    - name: test-task
+      templateRef:
+        clusterScope: true
+        name: test-task-template
+    - depends: (test-task.Succeeded || test-task.Running) && vcs-get.Succeeded
+      name: image-build
+      templateRef:
+        clusterScope: true
+        name: acc-image-kaniko
+----
+
+<<<
+
+=== 클러스터 파이프라인 템플릿 수정
+
+클러스터 파이프라인 템플릿의 태스크에 대한 정보를 변경해야하는 경우 또는 클러스터 파이프라인 템플릿을 빈 템플릿으로 만들어 변경할 필요가 있는 경우
+`파이프라인` 탭의 `수정` 버튼을 선택한다.
+
+image::menu/cluster/build/pipeline-template-pre-task-update.png[]
+
+수정을 원하는 태스크의 `수정` 버튼을 선택한다.
+
+image::menu/cluster/build/pipeline-template-task-update.png[]
+
+[NOTE]
+====
+태스크가 없는 클러스터 파이프라인 템플릿의 경우에는 수정하여, 빈 태스크의 `+` 버튼을 선택하면 태스크 구성을 할 수 있다.
+====
+
+<<<
+  
+=== 태스크 생성
+`파이프라인` 탭의 `수정` 버튼 클릭, `+` 버튼을 선택 후 나오는 YAML 에서 입력 한다. +
+
+image:menu/cluster/build/pipeline-template-add-task.png[]
+
+=== 태스크 삭제
+상단의 `파이프라인` 탭을 선택한다. +
+그리고 삭제를 원하는 task를 선택한 다음 `수정` 버튼을 누르고, +
+`태스크 삭제` 버튼을 클릭 후 우측 상단의 `저장` 버튼을 클릭한다. +
+
+image:menu/cluster/build/pipeline-template-delete-task.png[]
+
+<<<
+
+=== 클러스터 파이프라인 템플릿 삭제
+
+삭제하려는 클러스터 파이프라인 템플릿을 선택하고 우측 상단의 `삭제` 버튼을 클릭 한다.
+
+image::menu/cluster/build/pipeline-template-delete.png[]
+
+이후 표시되는 모달에서 이름을 입력하고 `삭제하기` 버튼을 선택한다.

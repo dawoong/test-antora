@@ -1,0 +1,43 @@
+= 네임스페이스 메뉴
+ifndef::imagesdir[:imagesdir: ../../images]
+:leveloffset: +1
+
+include::namespace/dashboard.adoc[]
+
+<<<
+
+include::namespace/application.adoc[]
+
+<<<
+
+include::namespace/build.adoc[]
+
+<<<
+
+include::namespace/workload.adoc[]
+
+<<<
+
+include::namespace/config.adoc[]
+
+<<<
+
+include::namespace/network.adoc[]
+
+<<<
+
+include::namespace/storage.adoc[]
+
+<<<
+
+include::namespace/accesscontrol.adoc[]
+
+<<<
+
+include::namespace/monitoring.adoc[]
+
+<<<
+
+include::namespace/setting.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,27 @@
+= 커스텀 리소스
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+커스텀 리소스는 사용자가 정의한 오브젝트를 생성할 수 있다. 쿠버네티스에서 제공하는 리소스 외에도 필요한
+리소스를 쿠버네티스 내부에 사용할 수 있다.
+
+image::menu/cluster/customresource/customresource-list.png[]
+
+== 커스텀 리소스 생성
+
+`+ 커스텀리소스데피니션 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 커스텀 리소스 리소스 정보를 입력하여 생성할 수 있다.
+
+image::menu/cluster/customresource/customresource-create.png[]
+
+<<<
+
+== 커스텀 리소스 수정
+
+수정하려는 커스텀 리소스를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+    
+== 커스텀 리소스 삭제
+
+삭제하려는 커스텀 리소스를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/customresource/customresource-delete.png[]
+
+모달에서 네임스페이스와 커스텀 리소스 이름을 입력하여 삭제한다.

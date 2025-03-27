@@ -1,0 +1,17 @@
+= 메뉴
+ifndef::imagesdir[:imagesdir: ../images]
+:leveloffset: +1
+
+글로벌/클러스터/네임스페이스 각 스코프에 대한 메뉴를 설명한다.
+
+include::menu/global.adoc[]
+
+<<<
+
+include::menu/cluster.adoc[]
+
+<<<
+
+include::menu/namespace.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,266 @@
+[[cluster-network]]
+= 네트워크
+ifndef::imagesdir[:imagesdir: ../../../images]
+
+워크로드가 통신하기 위한 네트워크 설정을 관리한다.
+
+== 서비스
+
+애플리케이션 및 워크로드의 파드 집합에 단일 DNS를 부여하고 로드밸런싱을 수행한다.
+
+=== 개요
+
+서비스의 세부 정보, 서브셋, 포트, 참조 리소스, 이벤트를 제공한다.
+
+image::menu/cluster/network/service/service-overview.png[]
+
+==== 세부 정보
+
+서비스에 대한 세부 정보를 제공한다.
+
+image::menu/cluster/network/service/service-info.png[]
+
+==== 서브셋
+
+서비스에 맵핑된 엔드포인트 정보에 따라 파드 정보를 제공하며 클릭 시 해당 리소스로 이동된다.
+
+image::menu/cluster/network/service/service-subset.png[]
+
+==== 포트
+
+서비스의 포트 정보 및 노드 포트로 접속할 수 있는 버튼을 제공한다.
+
+image::menu/cluster/network/service/service-port.png[]
+
+[[network-ref-refresource]]
+==== 참조 리소스
+
+서비스의 참조 리소스 정보를 제공하며 클릭 시 해당 리소스로 이동된다.
+
+image::menu/cluster/network/ingress/ingress-refresource.png[]
+
+[[network-event-info]]
+==== 이벤트 정보
+
+서비스에서 발생하는 이벤트 정보를 제공한다.
+
+image::menu/cluster/network/service/service-event.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 타입
+| 이벤트 타입
+
+* Normal: 일반적인 작업으로 발생된 이벤트
+
+* Warning: 오류에 의해 발생된 이벤트
+
+| 메시지
+| 이벤트 메시지
+
+| 원인
+| 이벤트 발생 이유
+
+| 생성된 시간
+| 이벤트 생성 후 지난 시간
+
+|===
+
+<<<
+
+==== 토폴로지
+
+서비스와 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+서비스의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- 디플로이먼트, 레플리카셋, 데몬셋, 스테이트풀셋, 파드
+- 서비스
+----
+
+image::menu/cluster/network/service/service-topology.png[]
+
+
+=== 서비스 생성
+
+`+ 서비스 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 서비스 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.
+
+image::menu/cluster/network/service/service-create.png[]
+
+<<<
+
+=== 서비스 수정
+
+수정하려는 서비스를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+
+=== 서비스 복제
+
+서비스를 다른 클러스터, 네임스페이스에 복제할 수 있다.
+
+image::menu/cluster/network/service/service-copy.png[]
+
+=== 서비스 삭제
+
+삭제하려는 서비스를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/network/service/service-delete.png[]
+
+모달에서 네임스페이스와 서비스 이름을 입력하여 삭제한다.
+
+<<<
+
+== 인그레스
+
+인그레스는 클러스터 외부에서 클러스터 내부 서비스로 HTTP와 HTTPS 경로를 노출한다. 인그레스는 외부에서
+서비스로 접속이 가능한 URL, 로드 밸런스 트래픽, SSL/TLS 종료 그리고 이름-기반의 가상 호스팅을 제공하도록
+구성할 수 있다.
+
+=== 개요
+
+인그레스의 세부 정보, 라우트 규칙, 참조 리소스, 이벤트를 제공한다.
+
+image::menu/cluster/network/ingress/ingress-overview.png[]
+
+==== 세부 정보
+
+인그레스에 대한 세부 정보를 제공한다.
+
+image::menu/cluster/network/ingress/ingress-info.png[]
+
+<<<
+
+==== 라우트 규칙
+
+image::menu/cluster/network/ingress/ingress-rule.png[]
+
+[%header,cols="1,3a"]
+|===
+| 항목
+| 설명
+
+| 호스트
+| 네트워크 요청이 들어오는 호스트 명
+
+| TLS
+| https 설정을 위한 시크릿 정보
+
+| 경로 유형
+|
+
+* ImplementationSpecific : IngressClass의 설정에 따름
+* Exact : url경로를 정확하게 일치
+* Prefix : /로 분할된 url 경로 접두사를 기반으로 일치
+
+| 경로
+| 요청의 경로
+
+| 백엔드
+| 호스트와 경로에 연결된 서비스
+
+| 백엔드 IP
+| 서비스의 IP
+
+| 포트
+| 서비스의 포트
+
+|===
+
+==== 참조 리소스
+
+서비스와 내용이 동일하기 때문에 <<network-ref-refresource,서비스 참조 리소스>>를 참고한다.
+
+==== 이벤트 정보
+
+서비스와 내용이 동일하기 때문에 <<network-event-info,서비스 이벤트 정보>>를 참고한다.
+
+<<<
+
+==== 토폴로지
+
+인그레스와 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+인그레스의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- 인그레스, 서비스
+- 파드
+- 시크릿
+----
+
+image::menu/cluster/network/ingress/ingress-topology.png[]
+
+=== 인그레스 생성
+
+`+ 인그레스 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 인그레스 리소스 정보를 입력하여 생성할 수 있다. 생성 시에는 FORM/YAML로 입력할 수 있다.
+
+image::menu/cluster/network/ingress/ingress-create.png[]
+
+<<<
+
+=== 인그레스 수정
+
+수정하려는 인그레스를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+
+=== 인그레스 복제
+
+인그레스를 다른 클러스터, 네임스페이스에 복제할 수 있다.
+
+image::menu/cluster/network/ingress/ingress-copy.png[]
+
+=== 인그레스 삭제
+
+삭제하려는 인그레스를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/network/ingress/ingress-delete.png[]
+
+모달에서 네임스페이스와 인그레스 이름을 입력하여 삭제한다.
+
+<<<
+
+== 네트워크폴리시
+
+네트워크폴리시는 네트워크 트래픽 제어를 위해 트래픽에 대한 규칙을 정의할 수 있다.
+
+=== 토폴로지
+
+네트워크폴리시와 관련된 리소스를 토폴로지 형태로 보여준다. +
+기본 기능은 파드와 내용이 동일하기 때문에 <<pod-topology,파드 토폴로지>>를 참고한다. +
+
+네트워크폴리시의 토폴로지에서 출력되는 리소스는 다음과 같다. +
+
+----
+- 네트워크폴리시
+- 파드
+----
+
+image::menu/cluster/network/networkpolicy/networkpolicy-topology.png[]
+
+<<<
+
+=== 네트워크폴리시 생성
+
+`+ 네트워크폴리시 생성` 을 선택하면 나타나는 화면에서 쿠버네티스 네트워크폴리시 리소스 정보를 입력하여 생성할 수 있다.
+
+image::menu/cluster/network/networkpolicy/networkpolicy-create.png[]
+
+=== 네트워크폴리시 수정
+
+수정하려는 네트워크폴리시를 선택하고 우측의 YAML 편집기에서 정보를 변경 후 `수정` 버튼을 선택하여 반영한다.
+
+image::menu/cluster/network/networkpolicy/networkpolicy-fix.png[]
+
+<<<
+
+=== 네트워크폴리시 삭제
+
+삭제하려는 네트워크폴리시를 선택하고 우측의 `삭제` 버튼을 선택한다.
+
+image::menu/cluster/network/networkpolicy/networkpolicy-delete.png[]
+
+모달에서 네임스페이스와 네트워크폴리시 이름을 입력하여 삭제한다.
