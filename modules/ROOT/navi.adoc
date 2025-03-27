@@ -1,9 +1,9 @@
 .목차
 * xref:docs/intro.adoc[소개]
-** xref:docs/intro.adoc#개요[개요]
-** xref:docs/intro.adoc#시스템 구성[시스템 구성]
-** xref:docs/intro.adoc#클러스터 구성[클러스터 구성]
-** xref:docs/intro.adoc#사용자와 권한[사용자와 권한]
+** xref:docs/intro.adoc#_개요[개요]
+** xref:docs/intro.adoc#_시스템_구성[시스템 구성]
+** xref:docs/intro.adoc#_클러스터_구성[클러스터 구성]
+** xref:docs/intro.adoc#_사용자와_권한[사용자와 권한]
 
 * xref:docs/intro.adoc[로그인]
 ** xref:docs/intro.adoc[웹 콘솔 로그인]
