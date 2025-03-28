@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>글로벌 메뉴 :: Accordion Manual</title>
+    <meta name="page-spec" content="accordion manual::docs/menu/global.adoc">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" title="Asciidoctor" href="https://asciidoctor.org"><img src="../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <a class="navbar-item title" href="../../../..">Accordion Manual</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">AsciiDoc</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Language</a>
+            <a class="navbar-item" href="#">Syntax Quick Reference</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Processing</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Asciidoctor <small>Ruby</small></a>
+            <a class="navbar-item" href="#">Asciidoctor.js <small>JavaScript</small></a>
+            <a class="navbar-item" href="#">AsciidoctorJ <small>Java</small></a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Extensions</div>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">Add-on Converters</div>
+            <a class="navbar-item" href="#">reveal.js <small>Ruby, JavaScript</small></a>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Extended Syntax</div>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Tooling</div>
+          <div class="navbar-dropdown is-right">
+            <div class="navbar-item">Build Automation</div>
+            <hr class="navbar-divider">
+            <div class="navbar-item">Text Editors / Viewers</div>
+            <a class="navbar-item" href="https://intellij-asciidoc-plugin.ahus1.de/docs" target="_blank" rel="noopener">IntelliJ Plugin</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://github.com/asciidoctor" target="_blank" rel="noopener">
+          <span class="icon"><img src="../../../../_/img/octicons-16.svg#view-mark-github"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active is-loading" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" title="Toggle expand/collapse all"></button>
+    <h3 class="title"><a href="../../index.html">Accordion Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">목차</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_소개">소개</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_개요">개요</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_시스템_구성">시스템 구성</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_클러스터_구성">클러스터 구성</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_사용자와_권한">사용자와 권한</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_로그인">로그인</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_웹_콘솔_로그인">웹 콘솔 로그인</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html#_계정">계정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_화면_구성">화면 구성</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_화면_영역">화면 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_헤더_영역">헤더 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_스코프_선택">스코프 선택</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_사용자_설정">사용자 설정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_메뉴_영역">메뉴 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_글로벌_메뉴">글로벌 메뉴</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_클러스터_메뉴">클러스터 메뉴</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네임스페이스_메뉴">네임스페이스 메뉴</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_이벤트_영역">이벤트 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_이벤트_영역의_최소화">이벤트 영역의 최소화</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_이벤트_영역의_최대화">이벤트 영역의 최대화</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_메뉴">메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_글로벌_메뉴_2">글로벌 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_글로벌_대시보드">글로벌 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_클러스터">클러스터</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_대시보드">대시보드</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_헬름">헬름</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_헬름_리포지터리">헬름 리포지터리</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_계정_2">계정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_사용자">사용자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_그룹">그룹</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_권한">권한</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_글로벌_멤버">글로벌 멤버</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_사용자_접속_로그">사용자 접속 로그</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_글로벌_설정">글로벌 설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_활성화_키">활성화 키</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#global-receiver">글로벌 수신자</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_클러스터_메뉴_2">클러스터 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_클러스터_대시보드">클러스터 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_네임스페이스">네임스페이스</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네임스페이스_생성">네임스페이스 생성</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네임스페이스_수정">네임스페이스 수정</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네임스페이스_삭제">네임스페이스 삭제</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_노드">노드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_cordon">Cordon</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_drain">Drain</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_라벨_수정">라벨 수정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_애플리케이션">애플리케이션</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-catalog-template">클러스터 카탈로그 템플릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-helm">헬름</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_빌드">빌드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-build">클러스터 태스크 템플릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_클러스터_파이프라인_템플릿">클러스터 파이프라인 템플릿</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-workload">워크로드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_워크로드_대시보드">워크로드 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_파드">파드</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_디플로이먼트">디플로이먼트</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_스테이트풀셋">스테이트풀셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_데몬셋">데몬셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_레플리카셋">레플리카셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_잡">잡</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_크론잡">크론잡</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-config">구성</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_컨피그맵">컨피그맵</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_시크릿">시크릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_hpa">HPA</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_리밋레인지">리밋레인지</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-network">네트워크</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_서비스">서비스</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_인그레스">인그레스</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네트워크폴리시">네트워크폴리시</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_스토리지">스토리지</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_퍼시스턴트볼륨">퍼시스턴트볼륨</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-pvc">퍼시스턴트볼륨클레임</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_스토리지클래스">스토리지클래스</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_커스텀_리소스">커스텀 리소스</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_커스텀_리소스_생성">커스텀 리소스 생성</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_커스텀_리소스_수정">커스텀 리소스 수정</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_커스텀_리소스_삭제">커스텀 리소스 삭제</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-accesscontrol">접근제어</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#role">롤</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_롤바인딩">롤바인딩</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#clusterrole">클러스터롤</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_클러스터롤바인딩">클러스터롤바인딩</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#serviceaccount">서비스어카운트</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-monitoring">모니터링</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-monitoring-system">시스템</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-event-log">이벤트 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-container-log">컨테이너 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-audit-log">감사 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-monitoring-alert">알림 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_서비스메시">서비스메시</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#cluster-setting">설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#cluster-member">클러스터 멤버</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_클러스터_수신자">클러스터 수신자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_알림_정책">알림 정책</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_레지스트리">레지스트리</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_네임스페이스_메뉴_2">네임스페이스 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_네임스페이스_대시보드">네임스페이스 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_애플리케이션_2">애플리케이션</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_카탈로그">카탈로그</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_빌드_2">빌드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_파이프라인">파이프라인</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_승인">승인</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_태스크_템플릿">태스크 템플릿</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_워크로드">워크로드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_구성">구성</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_네트워크">네트워크</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_스토리지_2">스토리지</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../index.html#_접근제어">접근제어</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_모니터링">모니터링</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_애플리케이션_3">애플리케이션</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html#_설정">설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_네임스페이스_수신자">네임스페이스 수신자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../index.html#_알림_정책_2">알림 정책</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+  <script>
+;(function () {
+  var panel = document.querySelector('.nav-panel-menu')
+  var page
+  var hash = window.location.hash
+  if (hash) {
+    if (~hash.indexOf('%')) hash = decodeURIComponent(hash)
+    if (~hash.indexOf('"')) hash = hash.replace(/(?=")/g, '\\')
+    var link = panel.querySelector('.nav-link[href="' + hash + '"]')
+    if (link) page = link.parentNode
+    else if ((page = panel.querySelector('.is-current-url'))) page.classList.add('is-provisional')
+  } else {
+    page = panel.querySelector('.is-current-url')
+  }
+  if (page) {
+    var ancestor = page
+    while ((ancestor = ancestor.parentNode) && ancestor !== panel) {
+      if (ancestor.className === 'nav-item') ancestor.classList.add('is-current-path', 'is-active')
+    }
+    page.classList.add('is-current-page', 'is-active')
+    if (panel.scrollHeight > panel.clientHeight) {
+      var panelRect = panel.getBoundingClientRect()
+      var linkRect = page.querySelector('.nav-link').getBoundingClientRect()
+      panel.scrollTop += Math.round(linkRect.top - panelRect.top - (panelRect.height - linkRect.height) * 0.5)
+    }
+  } else {
+    panel.scrollTop = 0
+  }
+  panel.classList.remove('is-loading')
+})()
+  </script>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Accordion Manual</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Accordion Manual</a></li>
+    <li><a href="global.html" class="discrete">글로벌 메뉴</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/global.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">글로벌 메뉴</h1>
+<div class="sect1">
+<h2 id="_글로벌_대시보드"><a class="anchor" href="#_글로벌_대시보드"></a>글로벌 대시보드</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>글로벌 대시보드는 쿠버네티스 리소스 및 CPU/메모리와 같은 시스템 리소스 사용 현황 정보를 제공한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/dashboard/dashboard.png" alt="dashboard">
+</div>
+</div>
+<div class="paragraph">
+<p>제공하는 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">아코디언 매니저 정보</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호스트 클러스터 설명 및 리소스 정보를 제공한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 정보</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">아코디언과 연결된 클러스터들의 시스템/리소스 정보를 제공한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용량 Top5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터, 노드, 파드 별로 CPU/메모리 사용량 상위 5개에 대한 정보를 차트로 제공한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">네임스페이스</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 클러스터에 생성된 네임스페이스 정보를 제공한다.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_클러스터"><a class="anchor" href="#_클러스터"></a>클러스터</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>클러스터는 컨테이너화된 애플리케이션을 실행하기 위한 노드의 집합을 의미한다. 컨테이너화된 애플리케이션은
+개별 노드에 얽매이지 않고 클러스터에 배포된다. 클러스터는 클러스터를 관리하는 호스트 클러스터와
+사용자의 애플리케이션이 배포되는 멤버 클러스터로 구분되며 호스트 클러스터는 멤버 클러스터의 역할도 수행한다.
+아코디언은 하나의 호스트 클러스터와 하나 이상의 멤버 클러스터로 구성된다.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>호스트/멤버 클러스터의 구성 예</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>싱글 클러스터 구성</p>
+<div class="ulist">
+<ul>
+<li>
+<p>하나의 클러스터가 호스트/멤버 클러스터 역할을 모두 수행</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>관리 클러스터와 운영 클러스터 분리</p>
+<div class="ulist">
+<ul>
+<li>
+<p>호스트 클러스터에서는 관리의 업무만 수행하고 별도의 멤버 클러스터에만 애플리케이션을 배포</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_대시보드"><a class="anchor" href="#_대시보드"></a>대시보드</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/cluster/cluster.png" alt="cluster">
+</div>
+</div>
+<div class="paragraph">
+<p>클러스터 메뉴에서는 호스트 클러스터의 정보를 조회하고 멤버 클러스터를 관리할 수 있다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 제공자 (e.g. EKS, AKS, GKE..)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K8sVersion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">쿠버네티스 버전</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 생성 시간 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cores, Disk, Memory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 전체 리소스(CPU/디스크/메모리) 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Master Node, Worker Node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터를 구성하는 마스터 노드와 워커 노드의 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespaces, Pods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터에 생성된 네임스페이스와 파드의 개수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">버전 정보</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모듈별 버전 정보 제공</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수정, 삭제</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">멤버 클러스터에만 있는 기능으로 클러스터 정보를 수정 또는 삭제</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="sect3">
+<h4 id="_버전_정보"><a class="anchor" href="#_버전_정보"></a>버전 정보</h4>
+<div class="paragraph">
+<p>클러스터에 등록된 모듈들의 버전 정보를 보여준다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/cluster/cluster-version.png" alt="cluster version">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_멤버_클러스터_정보_수정"><a class="anchor" href="#_멤버_클러스터_정보_수정"></a>멤버 클러스터 정보 수정</h4>
+<div class="paragraph">
+<p>클러스터 목록에 있는 멤버 클러스터는 정보를 수정할 수 있다. 클러스터 정보를 수정하려면 클러스터 카드 우측의
+<code>수정</code> 버튼을 선택하면 클러스터 수정 화면으로 이동한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/cluster/member-cluster-update.png" alt="member cluster update">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>제공하는 정보는 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 이름 (변경 불가)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서버</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">멤버 클러스터에 설치된 <code>member-agent</code> 의 엔드포인트를 입력</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">프로바이더</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 제공자 (e.g. EKS, AKS, GKE..)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">롤</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터의 역할로 <code>Member</code> 만 선택 가능</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">프록시 CA 인증서</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>member-agent</code> 에서 사용하는 CA 인증서</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">설명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">클러스터 설명</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_멤버_클러스터_삭제"><a class="anchor" href="#_멤버_클러스터_삭제"></a>멤버 클러스터 삭제</h4>
+<div class="paragraph">
+<p>멤버 클러스터를 관리 목록에서 제거하려면 클러스터 카드 우측의 <code>삭제</code> 버튼을 선택한다. 클러스터 삭제는
+아코디언의 관리 목록에서 제외하는 것이지 실제 클러스터를 삭제하지는 않는다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/cluster/member-cluster-delete.png" alt="member cluster delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_헬름"><a class="anchor" href="#_헬름"></a>헬름</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>헬름은 쿠버네티스 애플리케이션 배포를 지원하는 도구로 아코디언에서는 헬름 리포지터리 및 차트를 관리하고 이를
+이용해 클러스터에 애플리케이션을 배포할 수 있게 서비스를 제공한다.</p>
+</div>
+<div class="paragraph">
+<p>아코디언은 폐쇄망에서도 헬름 차트를 관리할 수 있도록 <code>accordion</code> 이라는 기본 리포지터리를 제공한다. 사용자가
+외부의 리포지터리를 추가하기 위해서는 인터넷을 통해 외부에 접근이 가능해야 한다.</p>
+</div>
+<div class="sect2">
+<h3 id="_헬름_리포지터리"><a class="anchor" href="#_헬름_리포지터리"></a>헬름 리포지터리</h3>
+<div class="sect3">
+<h4 id="_헬름_리포지터리_등록"><a class="anchor" href="#_헬름_리포지터리_등록"></a>헬름 리포지터리 등록</h4>
+<div class="paragraph">
+<p>헬름 메뉴에 접근하여 상단의 <code>등록</code> 버튼을 선택하면 헬름 리포지터리 정보를 입력하는 모달 화면이 표시된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/repo_reg.png" alt="repo reg">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 리포지터리 이름 (필수)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 리포지터리 URL (필수)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 리포지터리 아이디 (옵션)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헬름 리포지터리 패스워드 (옵션)</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_헬름_리포지터리_업데이트"><a class="anchor" href="#_헬름_리포지터리_업데이트"></a>헬름 리포지터리 업데이트</h4>
+<div class="paragraph">
+<p>우측 상단의 업데이트 버튼을 선택하면 헬름 리포지터리의 차트 정보를 최신으로 업데이트할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/repo_refresh.png" alt="repo refresh">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_헬름_리포지터리_삭제"><a class="anchor" href="#_헬름_리포지터리_삭제"></a>헬름 리포지터리 삭제</h4>
+<div class="paragraph">
+<p>삭제하려는 리포지터리를 선택하고 우측 상단의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+기본 제공하는 <code>accordion</code> 리포지터리는 삭제할 수 없다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/repo_delete.png" alt="repo delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_헬름_차트"><a class="anchor" href="#_헬름_차트"></a>헬름 차트</h4>
+<div class="sect4">
+<h5 id="_헬름_차트_등록"><a class="anchor" href="#_헬름_차트_등록"></a>헬름 차트 등록</h5>
+<div class="paragraph">
+<p>아코디언에서는 기본 제공하는 <code>accordion</code> 리포지터리에만 헬름 차트를 등록할 수 있다. 헬름 차트를 등록하기 위해
+<code>accordion</code> 리포지터리를 선택하고 상단의 <code>헬름 차트 등록</code> 버튼을 선택한다. 모달에서 헬름 차트 파일을 입력하여 등록한다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+아코디언에 헬름 차트를 등록하기 전에 <code>tgz</code> 확장자로 압축한 헬름 차트 파일을 미리 준비한다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/chart_reg.png" alt="chart reg">
+</div>
+</div>
+<div class="paragraph">
+<p>헬름 차트가 정상적으로 등록되면 아래와 같이 조회할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/chart_list.png" alt="chart list">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_헬름_차트_삭제와_다운로드"><a class="anchor" href="#_헬름_차트_삭제와_다운로드"></a>헬름 차트 삭제와 다운로드</h5>
+<div class="paragraph">
+<p>헬름 차트 목록 우측의 버튼을 이용해 차트를 삭제하거나 파일로 다운로드 받을 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/helm/chart_manage.png" alt="chart manage">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_계정"><a class="anchor" href="#_계정"></a>계정</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>계정에서는 사용자 정보와 권한, 접속 로그와 같이 전반적인 계정 관리에 필요한 기능을 제공한다.</p>
+</div>
+<div class="sect2">
+<h3 id="_사용자"><a class="anchor" href="#_사용자"></a>사용자</h3>
+<div class="paragraph">
+<p>사용자 메뉴에서 사용자 정보를 등록하거나 수정/삭제할 수 있다. 사용자 목록 정보에서는 사용자의 활성화 여부에
+따라 목록의 아이콘이 녹색 또는 빨간색으로 표시된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/user/user-list.png" alt="user list">
+</div>
+</div>
+<div class="paragraph">
+<p>사용자 페이지는 <code>계정 정보</code>, <code>비밀번호</code>, <code>그룹</code>, <code>권한 조회</code> 으로 이뤄진 4개의 탭으로 구성되어 있으며, 제공하는 정보는 다음과 같다.</p>
+</div>
+<div class="sect3">
+<h4 id="_계정_정보"><a class="anchor" href="#_계정_정보"></a>계정 정보</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 아이디 (영문, 숫자, 하이픈('-'), 언더스코어('_'), 마침표('.')만 입력 가능하며, 시작과 끝에 영문 또는 숫자만 허용)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">활성화</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 활성화 여부 (활성 또는 비활성)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">휴대전화</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 휴대전화 번호(숫자만 입력 가능하며 10~11자리 입력)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이메일</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">성</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 성</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">부서</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 부서명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사번</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 사원 번호 (영문, 숫자, 하이픈('-')만 입력 가능)</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_비밀번호"><a class="anchor" href="#_비밀번호"></a>비밀번호</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">새 비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호를 입력 (영문, 숫자, 특수문자로 입력하며 8~16 자리로 특수문자가 1자 이상 포함)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">새 비밀번호 확인</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">새 비밀번호와 동일하게 사용자 비밀번호를 다시 입력</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">비밀번호 초기화</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">비밀번호 초기화 여부 (활성 또는 비활성)<br>
+  활성할 경우 첫 로그인시 새로운 비밀번호로 변경하는 페이지로 이동한다.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_그룹"><a class="anchor" href="#_그룹"></a>그룹</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자와 그룹을 다대일의 관계로 연결</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_권한_조회"><a class="anchor" href="#_권한_조회"></a>권한 조회</h4>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/user/user-auth.png" alt="user auth">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">권한 조회 유형</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>전체</code> (개인+그룹), <code>개인</code>, <code>그룹</code> 으로 구성되었으며, 특정 유형을 선택하여 조회할 수 있다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">내보내기</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">권한을 csv 파일로 내보낸다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">글로벌 권한<br>
+  클러스터 권한<br>
+  네임스페이스 권한</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자가 해당 권한을 가지고 있다면 <code>v</code> 로 체크된다.<br>
+  상단의 권한 이름을 선택할 경우 해당 권한 페이지로 이동된다.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_사용자_등록"><a class="anchor" href="#_사용자_등록"></a>사용자 등록</h4>
+<div class="paragraph">
+<p>사용자를 등록하기 위해서는 우측 상단에 있는 <code>+ 사용자 생성</code> 버튼을 선택하면, 사용자 등록 페이지로 이동한다.</p>
+</div>
+<div class="paragraph">
+<p>붉은점으로 표시된 정보는 필수 사항이며, 정보를 입력한 후 <code>사용자 생성</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/user/user-create.png" alt="user create">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_사용자_수정"><a class="anchor" href="#_사용자_수정"></a>사용자 수정</h4>
+<div class="paragraph">
+<p>사용자를 수정하기 위해서는 사용자 목록에서 사용자를 선택하고, 이후 수정할 정보를 입력한 후 <code>변경값 저장</code> 버튼을 선택한다.</p>
+</div>
+<div class="paragraph">
+<p>사용자 정보 수정은 각 탭 별로 수정된다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_사용자_삭제"><a class="anchor" href="#_사용자_삭제"></a>사용자 삭제</h4>
+<div class="paragraph">
+<p>사용자를 삭제하기 위해서는 목록에서 삭제할 대상이 되는 사용자를 선택하고 <code>계정 정보</code> 탭의 <code>계정 삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="paragraph">
+<p>이후 나타나는 모달에서 사용자명을 입력한 후 <code>삭제하기</code> 버튼을 선택하면 완료된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/user/user-delete.png" alt="user delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_그룹_2"><a class="anchor" href="#_그룹_2"></a>그룹</h3>
+<div class="paragraph">
+<p>그룹 메뉴에서 그룹 정보를 등록, 수정, 삭제할 수 있다. 관리자는 <code>멤버</code> 메뉴에서 사용자 또는 그룹에 권한을
+부여할 수 있다. 그룹 정보에서는 해당 그룹에 등록된 사용자 목록 정보를 제공한다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>그룹</code> 은 사용자 집합을 의미한다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-list.png" alt="group list">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹의 고유 아이디</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Display Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자, 글로벌 멤버, 클러스터 멤버, 네임스페이스 멤버에서 해당 그룹이 표시되는 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요약</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹의 요약된 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">설명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹의 상세 설명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 목록</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹과 연결된 사용자의 목록 (사용자 이름)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_그룹_등록"><a class="anchor" href="#_그룹_등록"></a>그룹 등록</h4>
+<div class="paragraph">
+<p>그룹을 등록하기 위해서는 우측 상단의 <code>+ 그룹 생성</code> 버튼을 선택한 후 필수 항목인 이름 및 기타 선택항목을 작성 후 <code>그룹 생성</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-create.png" alt="group create">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>Display Name</strong></p>
+</div>
+<div class="paragraph">
+<p>그룹을 등록하는 곳에서 실제로 표시될 이름을 정의한다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+사용자를 그룹에 연결하는 것은 사용자 메뉴에서 사용자 정보의 그룹 정보를 변경해서 수행한다.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-displayname-default.png" alt="group displayname default">
+</div>
+</div>
+<div class="paragraph">
+<p>위의 이미지와 같이 그룹명 ( Display Name ) 으로 출력된다.<br>
+등록된 그룹의 정보를 수정하여 <code>Display Name</code> 에 정보를 수정하면 해당 내용으로 출력된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-displayname-change-after.png" alt="group displayname change after">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-displayname-change-before.png" alt="group displayname change before">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_그룹_삭제"><a class="anchor" href="#_그룹_삭제"></a>그룹 삭제</h4>
+<div class="paragraph">
+<p>그룹을 삭제하기 위해서는 목록에서 삭제할 대상이 되는 그룹을 선택하고 우측 상단의 <code>삭제</code> 버튼을 선택한다. 이후
+나타나는 모달에서 그룹 이름을 입력하고 <code>삭제하기</code> 버튼을 선택하면 완료된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/group/group-delete.png" alt="group delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_권한"><a class="anchor" href="#_권한"></a>권한</h3>
+<div class="paragraph">
+<p>권한은 여러 메뉴와 롤의 집합을 의미한다. 이러한 권한은 스코프 별로 따로 관리되며 각각 글로벌/클러스터/네임스페이스 권한이라고 한다. 각 스코프 권한에서는 해당 스코프 이하의 메뉴에 대해 바인딩할 수 있다.
+예를 들면 아래와 같다.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>글로벌 권한</p>
+<div class="ulist">
+<ul>
+<li>
+<p>클러스터 메뉴에 대한 롤 설정 가능 (글로벌 스코프)</p>
+</li>
+<li>
+<p>네임스페이스 메뉴에 대한 롤 설정 가능 (클러스터 스코프)</p>
+</li>
+<li>
+<p>카탈로그 메뉴에 대한 롤 설정 가능 (네임스페이스 스코프)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>클러스터 권한</p>
+<div class="ulist">
+<ul>
+<li>
+<p>네임스페이스 메뉴에 대한 롤 설정 가능 (클러스터 스코프)</p>
+</li>
+<li>
+<p>카탈로그 메뉴에 대한 롤 설정 가능 (네임스페이스 스코프)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>네임스페이스 권한</p>
+<div class="ulist">
+<ul>
+<li>
+<p>카탈로그 메뉴에 대한 롤 설정 가능 (네임스페이스 스코프)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+본문에서는 글로벌 권한을 예로 설명한다.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>글로벌/클러스터/네임스페이스 권한 메뉴에서 각 스코프별 권한 정보를 조회할 수 있다. 하나의 권한은 하나 이상의 메뉴와 롤로 구성된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/auth/auth-list.png" alt="auth list">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect3">
+<h4 id="_권한_등록"><a class="anchor" href="#_권한_등록"></a>권한 등록</h4>
+<div class="paragraph">
+<p>권한을 등록하기 위해서는 우측 상단의 <code>+ 글로벌 권한 생성</code> 버튼을 선택하고 권한의 이름과 권한에 포함할 메뉴 및 롤을 추가한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/auth/auth-create.png" alt="auth create">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_권한_수정"><a class="anchor" href="#_권한_수정"></a>권한 수정</h4>
+<div class="paragraph">
+<p>권한을 수정하기 위해서는 수정하려는 권한을 선택하고 우측 상단의 <code>수정</code> 버튼을 선택하여 수정 화면으로 이동한다. 그리고 메뉴을 추가하거나 삭제, 또는 메뉴에 대한 롤을 변경한다. 마지막으로 우측 상단의 <code>글로벌 권한 수정</code> 버튼을 선택하여 변경 사항을 권한에 반영한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/auth/auth-update.png" alt="auth update">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_권한_삭제"><a class="anchor" href="#_권한_삭제"></a>권한 삭제</h4>
+<div class="paragraph">
+<p>권한을 삭제하기 위해서는 삭제하려는 권한을 선택하고 우측 상단의 <code>삭제</code> 버튼을 선택한다. 이후 표시되는 모달에서 권한 이름을 입력하고 <code>삭제하기</code> 버튼을 선택한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/auth/auth-delete.png" alt="auth delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_글로벌_멤버"><a class="anchor" href="#_글로벌_멤버"></a>글로벌 멤버</h3>
+<div class="paragraph">
+<p>글로벌 멤버는 사용자와 그룹의 글로벌 권한을 관리한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/member/member-list.png" alt="member list">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">종류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">개별 사용자의 글로벌 권한 관리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">그룹 별 글로벌 권한 관리 <br>
+  (그룹에 있는 사용자들에게 모두 권한을 부여하는 것과 같은 효과)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_멤버_추가"><a class="anchor" href="#_멤버_추가"></a>멤버 추가</h4>
+<div class="paragraph">
+<p>사용자(또는 그룹) 목록 우측의 <code>추가</code> 버튼을 선택한다. 모달에서 사용자(또는 그룹)을 선택해 권한을 설정할 수
+있다. 설정 후에는 <code>저장</code> 버튼을 선택해야 변경 사항이 반영된다. 사용자(또는 그룹)은 다중 선택이 가능하지만
+권한은 단일 선택만이 가능하다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/member/member-add.png" alt="member add">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_멤버_권한_수정"><a class="anchor" href="#_멤버_권한_수정"></a>멤버 권한 수정</h4>
+<div class="paragraph">
+<p>사용자(또는 그룹) 우측의 <code>수정</code> 버튼으로 해당 사용자(또는 그룹)의 권한을 수정할 수 있다. 이후 상단의 <code>저장</code> 버튼을 클릭해야만 변경 사항이 반영된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/member/member-update.png" alt="member update">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_멤버_삭제"><a class="anchor" href="#_멤버_삭제"></a>멤버 삭제</h4>
+<div class="paragraph">
+<p>사용자(또는 그룹)의 우측 <code>삭제</code> 버튼을 선택하면 멤버를 삭제할 수 있다. 이후 상단의 <code>저장</code> 버튼을 클릭해야만 변경 사항이 반영된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/menu/global/account/member/member-delete.png" alt="member delete">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_사용자_접속_로그"><a class="anchor" href="#_사용자_접속_로그"></a>사용자 접속 로그</h3>
+<div class="paragraph">
+<p>사용자들의 로그인/로그아웃과 같은 접속 로그 정보를 조회할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/account/log/account_log_list.png" alt="account log list"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">접속 타입 (<code>LOGIN</code> 또는 <code>LOGOUT</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증 타입</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">승인 타입(인증 방식)으로 아코디언 웹 콘솔에서 로그인이 아닌 Basic 인증한 경우 <code>password</code> 인증 타입을 가진다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 UID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">세션 ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 세션 ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IP 주소</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 IP 주소</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>상단의 조건을 설정하여 보다 구체적으로 검색을 할 수 있다. 조건을 설정하고 <code>조회</code> 를 선택하면 해당 조건으로
+사용자 접속 로그를 검색한다. 설정 가능한 조건은 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입으로 필터링 (다중 선택 가능)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 명으로 필터링</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">캘린더로 날짜 범위를 지정</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+조회 후 테이블 헤더에 조건을 설정하면 결과 내 검색이 가능하다.
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_글로벌_설정"><a class="anchor" href="#_글로벌_설정"></a>글로벌 설정</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>글로벌 설정에서는 시스템 전반에 영향을 미치는 활성화 키와 알림 발송을 받는 수신자에 대한 설정이 가능하다.</p>
+</div>
+<div class="sect2">
+<h3 id="_활성화_키"><a class="anchor" href="#_활성화_키"></a>활성화 키</h3>
+<div class="paragraph">
+<p>아코디언을 사용하기 위한 활성화 키를 관리한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/license_main.png" alt="license main"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Standard 또는 Trial</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Standard</p>
+<div class="ulist">
+<ul>
+<li>
+<p>정식 활성화 키에 의해 관리받을 수 있는 타입</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Trial</p>
+<div class="ulist">
+<ul>
+<li>
+<p>일정 기간동안 아코디언을 사용해 볼 수 있는 타입</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">플랜</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Perpetual 또는 Subscription</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perpetual</p>
+<div class="ulist">
+<ul>
+<li>
+<p>영구적인 활성화 키</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Subscription</p>
+<div class="ulist">
+<ul>
+<li>
+<p>기간이 있는 활성화 키</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발행자</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 발행인 (Mantech)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">소유자</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 소유자</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발행일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 발행일</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">만료일</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>활성화 키 만료일</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="sect3">
+<h4 id="_활성화_키_등록"><a class="anchor" href="#_활성화_키_등록"></a>활성화 키 등록</h4>
+<div class="paragraph">
+<p>우측 상단의 <code>등록</code> 버튼을 선택한다. 모달이 나타나면 활성화 키를 입력하여 등록한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/license_create.png" alt="license create"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="global-receiver"><a class="anchor" href="#global-receiver"></a>글로벌 수신자</h3>
+<div class="paragraph">
+<p>알림 정책에 따라 알림을 받을 수신자를 설정한다.</p>
+</div>
+<div class="sect3">
+<h4 id="_글로벌_수신자_개요"><a class="anchor" href="#_글로벌_수신자_개요"></a>글로벌 수신자 개요</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-overview.png" alt="receiver overview"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="ulist">
+<ul>
+<li>
+<p>이메일</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호스트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP Host 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">포트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP Port 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발신자 이메일</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">발신 이메일 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">방식</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증 방식 <code>인증 안함</code>(익명), <code>Basic Auth</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 활성화</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 사용 여부</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP 사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SMTP 사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수신자 이메일 목록</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수신자 이메일 정보</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>슬랙</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">토큰</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">슬랙 토큰 값</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">채널 목록</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">슬랙 채널명</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>웹훅</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">분류</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Webhook URL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">웹훅 URL 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증 타입</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>인증 안함</code>(익명), <code>Bearer 인증</code>, <code>basic 인증</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">토큰</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bearer 인증</code> 의 경우 토큰 정보</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basic 인증</code> 의 경우 사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basic 인증</code> 의 경우 사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">바디</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청에 포함될 바디</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">헤더</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청에 대한 헤더</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 인증서 검증</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">검증 시 <code>O</code>, 미검증 시 <code>X</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Root CA 인증서</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Root CA 인증서 정보가 담긴 시크릿 이름 및 data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">인증서/개인 키</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TLS 인증서 및 개인키 정보가 담긴 시크릿 이름 및 data</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_글로벌_수신자_생성"><a class="anchor" href="#_글로벌_수신자_생성"></a>글로벌 수신자 생성</h4>
+<div class="paragraph">
+<p>수신자 생성 시 <code>이메일</code>, <code>슬랙</code>, <code>웹훅</code> 을 설정할 수 있다.</p>
+</div>
+<div class="sect4">
+<h5 id="_이메일_설정"><a class="anchor" href="#_이메일_설정"></a>이메일 설정</h5>
+<div class="paragraph">
+<p>수신자 구성 정보 및 수신 이메일을 입력 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_email_start.png" alt="receiver email start"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_email_receiverconfig.png" alt="receiver email receiverconfig"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_email_end.png" alt="receiver email end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect4">
+<h5 id="_슬랙_설정"><a class="anchor" href="#_슬랙_설정"></a>슬랙 설정</h5>
+<div class="paragraph">
+<p>수신자 구성 정보 및 채널을 입력 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_slack_start.png" alt="receiver slack start"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_slack_receiverconfig.png" alt="receiver slack receiverconfig"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver_slack_end.png" alt="receiver slack end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect4">
+<h5 id="_웹훅_설정"><a class="anchor" href="#_웹훅_설정"></a>웹훅 설정</h5>
+<div class="paragraph">
+<p>웹훅 URL, 헤더, 바디 정보를 입력한다.<br>
+<code>인증 안함</code>, <code>Bearer 인증</code>, <code>basic 인증</code> 중 인증 타입을 선택한다.<br>
+웹훅 URL, 헤더, 바디 정보 입력 및 인증 타입 선택 후 <code>테스트</code> 버튼을 눌러 유효한 설정인지 확인한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-webhook-start.png" alt="receiver webhook start"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Bearer 인증 선택 시 토큰 정보가 담긴 시크릿 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-webhook-bearer.png" alt="receiver webhook bearer"></span></p>
+</div>
+<div class="paragraph">
+<p>basic 인증 선택 시 사용자 및 비밀번호 정보가 담긴 시크릿 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-webhook-basic.png" alt="receiver webhook basic"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>TLS 인증서 검증 건너뛰기 해제 시<br>
+Root CA 인증서 및 인증서/개인키를 동일한 방법으로 생성 및 선택</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-webhook-end.png" alt="receiver webhook end"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Body 예시</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-webhook-body.png" alt="receiver webhook body"></span></p>
+</div>
+<div class="paragraph">
+<p>웹훅 바디는 JSON 형식으로 입력한다. 그러면 응답 관련 리소스인 notification manifest 와 함께 작성한 Json 형식의 데이터가 웹훅 발생 시 함께 전송된다.</p>
+</div>
+<div class="listingblock manifest">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">{
+  "test": "sample1",
+  "manifest": {
+    "kind": "ClusterNotification",
+    "apiVersion": "alert.accordions.co.kr/v1beta1",
+    "metadata": {
+      ...
+      },
+     ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>글로벌 수신자 생성 시 생성된 수신자/수신자 구성 정보는 모든 멤버 클러스터로 자동 복사됩니다. 이 수신자/수신자 구성 정보에는 SMTP 서버의 계정과 비밀번호, Slack이나 Webhook 서버의 사용자 계정(사용자명, 비밀번호)과 토큰, 인증서 정보 등의 기밀정보가 포함될 수 있습니다.<br>
+기밀정보는 각 멤버 클러스터의 Secret에 보관됩니다. 글로벌 수신자를 사용하기 전에 다음 사항을 반드시 숙지하세요.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>정보 유출 위험: 복사된 수신자/수신자 구성 정보는 모든 멤버 클러스터에 배포되므로, 각 클러스터의 보안 수준이 매우 중요합니다. 클러스터에 접근 권한을 철저히 관리하여 무단 접근을 방지하세요.<br>
+클러스터 수신자/수신자 구성 정보 중 기밀정보는 acc-system 네임스페이스의 secret으로 관리됩니다. 클러스터 관리자의 권한 사용자는 기밀정보의 접근이 가능하나, 그 외 네임스페이스 접근 사용자는 조회를 할 수 없습니다.<br>
+자세한 내용은 <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Kubernetes의 RBAC(역할 기반 접근 제어)</a>를 참고하세요.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_글로벌_수신자_수정"><a class="anchor" href="#_글로벌_수신자_수정"></a>글로벌 수신자 수정</h4>
+<div class="paragraph">
+<p>수신자 생성과 동일하게 <code>이메일</code>, <code>슬랙</code>, <code>웹훅</code> 내용 변경 후 <code>테스트</code> 버튼을 각각 눌러 유효한 설정인지 확인한 후 <code>수정</code> 버튼을 선택하여 반영한다.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_글로벌_수신자_삭제"><a class="anchor" href="#_글로벌_수신자_삭제"></a>글로벌 수신자 삭제</h4>
+<div class="paragraph">
+<p>삭제하려는 수신자를 선택하고 우측의 <code>삭제</code> 버튼을 선택한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/menu/global/setting/receiver-delete.png" alt="receiver delete"></span></p>
+</div>
+<div class="paragraph">
+<p>모달에서 수신자 이름을 입력 후 <code>삭제하기</code> 버튼을 선택한다.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="footer-main">
+    <figure class="footer-brand">
+      <a class="logo" href="https://asciidoctor.org"><img src="../../../../_/img/asciidoctor-logo.svg" alt="Asciidoctor" width="48"></a>
+      <figcaption class="footer-brand-name"><a href="https://asciidoctor.org">Asciidoctor</a></figcaption>
+    </figure>
+    <ul class="footer-brand-links">
+      <li><a href="https://asciidoctor.org" target="_blank" rel="noopener">Home</a></li>
+      <li><a href="../../../..">Docs</a></li>
+      <li><a href="https://github.com/asciidoctor" target="_blank" rel="noopener">Source</a></li>
+      <li><a href="http://discuss.asciidoctor.org" target="_blank" rel="noopener">Discuss</a></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <p>Copyright © 2025 Dan Allen, Sarah White, and individual Asciidoctor contributors. Except where noted, the content is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
+    <p>The UI for this site is based on the default Antora UI and is licensed under the MPL-2.0 license. Several icons are imported from <a href="https://primer.style/octicons/" target="_blank" rel="noopener">Octicons</a> and are licensed under the MIT license.</p>
+    <p>AsciiDoc is a Trademark of the Eclipse Foundation, Inc.</p>
+  </div>
+  <div class="footer-thanks">
+    <p>Thanks to our <a href="https://asciidoctor.org/supporters/" target="_blank" rel="noopener">backers</a> and <a href="https://asciidoctor.org/contributors/" target="_blank" rel="noopener">contributors</a> for helping to make this project possible. Additional thanks to:</p>
+    <p class="badges">
+      <a href="https://opendevise.com" title="Development support by OpenDevise" target="_blank" rel="noopener"><img src="https://secure.gravatar.com/avatar/823717a797dbd78ceff7b26aa397f383.png?size=80" alt="OpenDevise Logo" width="30"></a>
+      <a href="https://algolia.com/docsearch" title="Search by Algolia DocSearch" target="_blank" rel="noopener"><img src="../../../../_/img/algolia-logo.svg" alt="Algolia logo" width="30"></a>
+      <a href="https://netlify.com" title="Deploys by Netlify" target="_blank" rel="noopener"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" width="67"></a>
+    </p>
+    <p>Authored in AsciiDoc.<br>Produced by <a href="https://antora.org" target="_blank" rel="noopener">Antora</a> and <a href="https://asciidoctor.org" target="_blank" rel="noopener">Asciidoctor</a>.</p>
+  </div>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
