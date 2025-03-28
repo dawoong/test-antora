@@ -9,4 +9,4 @@ content:
 ui:
   bundle:
     url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-213/ui-bundle.zip
-
+    snapshot: true
