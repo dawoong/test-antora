@@ -11,6 +11,7 @@ ui:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
 
-asciidoc:
+antora:
   extensions:
-    - '@antora/lunr-extension'
+  - require: '@antora/lunr-extension'
+
