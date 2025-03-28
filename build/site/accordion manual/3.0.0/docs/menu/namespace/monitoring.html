@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>모니터링 :: Accordion Manual</title>
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Accordion Manual</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="accordion manual" data-version="3.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../../index.html">Accordion Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">목차</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_소개">소개</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_개요">개요</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_시스템_구성">시스템 구성</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_클러스터_구성">클러스터 구성</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_사용자와_권한">사용자와 권한</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_로그인">로그인</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_웹_콘솔_로그인">웹 콘솔 로그인</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../index.html#_계정">계정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_화면_구성">화면 구성</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_화면_영역">화면 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_헤더_영역">헤더 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_스코프_선택">스코프 선택</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_사용자_설정">사용자 설정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_메뉴_영역">메뉴 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_글로벌_메뉴">글로벌 메뉴</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_클러스터_메뉴">클러스터 메뉴</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_메뉴">네임스페이스 메뉴</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_이벤트_영역">이벤트 영역</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_이벤트_영역의_최소화">이벤트 영역의 최소화</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_이벤트_영역의_최대화">이벤트 영역의 최대화</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_메뉴">메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_글로벌_메뉴_2">글로벌 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_글로벌_대시보드">글로벌 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_클러스터">클러스터</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_대시보드">대시보드</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_헬름">헬름</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_헬름_리포지터리">헬름 리포지터리</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_계정_2">계정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_사용자">사용자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_그룹">그룹</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_권한">권한</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_글로벌_멤버">글로벌 멤버</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_사용자_접속_로그">사용자 접속 로그</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_글로벌_설정">글로벌 설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_활성화_키">활성화 키</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#global-receiver">글로벌 수신자</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_클러스터_메뉴_2">클러스터 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_클러스터_대시보드">클러스터 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_네임스페이스">네임스페이스</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_생성">네임스페이스 생성</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_수정">네임스페이스 수정</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_삭제">네임스페이스 삭제</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_노드">노드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_cordon">Cordon</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_drain">Drain</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_라벨_수정">라벨 수정</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_애플리케이션">애플리케이션</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-catalog-template">클러스터 카탈로그 템플릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-helm">헬름</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_빌드">빌드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-build">클러스터 태스크 템플릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_클러스터_파이프라인_템플릿">클러스터 파이프라인 템플릿</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-workload">워크로드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_워크로드_대시보드">워크로드 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_파드">파드</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_디플로이먼트">디플로이먼트</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_스테이트풀셋">스테이트풀셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_데몬셋">데몬셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_레플리카셋">레플리카셋</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_잡">잡</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_크론잡">크론잡</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-config">구성</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_컨피그맵">컨피그맵</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_시크릿">시크릿</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_hpa">HPA</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_리밋레인지">리밋레인지</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-network">네트워크</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_서비스">서비스</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_인그레스">인그레스</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네트워크폴리시">네트워크폴리시</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_스토리지">스토리지</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_퍼시스턴트볼륨">퍼시스턴트볼륨</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-pvc">퍼시스턴트볼륨클레임</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_스토리지클래스">스토리지클래스</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_커스텀_리소스">커스텀 리소스</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_커스텀_리소스_생성">커스텀 리소스 생성</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_커스텀_리소스_수정">커스텀 리소스 수정</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_커스텀_리소스_삭제">커스텀 리소스 삭제</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-accesscontrol">접근제어</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#role">롤</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_롤바인딩">롤바인딩</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#clusterrole">클러스터롤</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_클러스터롤바인딩">클러스터롤바인딩</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#serviceaccount">서비스어카운트</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-monitoring">모니터링</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-monitoring-system">시스템</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-event-log">이벤트 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-container-log">컨테이너 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-audit-log">감사 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-monitoring-alert">알림 로그</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_서비스메시">서비스메시</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#cluster-setting">설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#cluster-member">클러스터 멤버</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_클러스터_수신자">클러스터 수신자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#alert-policy">알림 정책</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_레지스트리">레지스트리</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_네임스페이스_메뉴_2">네임스페이스 메뉴</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_대시보드">네임스페이스 대시보드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_애플리케이션_2">애플리케이션</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_카탈로그">카탈로그</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_빌드_2">빌드</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_파이프라인">파이프라인</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_승인">승인</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_태스크_템플릿">태스크 템플릿</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_워크로드">워크로드</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_구성">구성</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_네트워크">네트워크</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_스토리지_2">스토리지</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../index.html#_접근제어">접근제어</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_모니터링">모니터링</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_애플리케이션_3">애플리케이션</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../index.html#_설정">설정</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_네임스페이스_수신자">네임스페이스 수신자</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../index.html#_알림_정책_2">알림 정책</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Accordion Manual</span>
+    <span class="version">3.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../../index.html">Accordion Manual</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../index.html">Accordion Manual</a></li>
+    <li><a href="monitoring.html">모니터링</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/dawoong/test-antora/edit/master/modules/ROOT/pages/docs/menu/namespace/monitoring.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">모니터링</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>모니터링은 운영자가 안정적인 시스템 운영을 할 수 있도록 시스템 리소스와 애플리케이션 퍼포먼스 및 로그
+(이벤트 로그, 감사 로그, 알림 로그) 에 대한 정보를 제공한다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>시스템, 이벤트 로그, 감사 로그, 알림 로그 메뉴의 경우 클러스터 스코프의 모니터링 메뉴에도 동일한 메뉴가
+있다. 둘은 스코프의 기준이 클러스터와 네임스페이스라는 것을 제외하고 동일하기 때문에 해당 가이드를 참고한다.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>시스템: <a href="#cluster-monitoring-system">클러스터/시스템</a></p>
+</li>
+<li>
+<p>이벤트 로그: <a href="#cluster-event-log">클러스터/이벤트 로그</a></p>
+</li>
+<li>
+<p>감사 로그: <a href="#cluster-audit-log">클러스터/감사 로그</a></p>
+</li>
+<li>
+<p>알림 로그: <a href="#cluster-monitoring-alert">클러스터/알림 로그</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_애플리케이션"><a class="anchor" href="#_애플리케이션"></a>애플리케이션</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_개요"><a class="anchor" href="#_개요"></a>개요</h3>
+<div class="paragraph">
+<p>애플리케이션 개요에서는 수집한 메트릭을 중심으로 애플리케이션의 성능 모니터링 정보를 제공한다. 주요
+모니터링 항목은 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">메트릭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">전체 액티브 서비스, 액티브 서비스, TPS, 오늘의 TPS, 방문자, 응답시간, XLog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시스템</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPU, 메모리</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/application.png" alt="application"></span></p>
+</div>
+<div class="paragraph">
+<p>각 모니터링 항목에 대한 설명은 다음과 같다.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">액티브 서비스</dt>
+<dd>
+<p>개별 인스턴스 별로 현재 처리중인 리퀘스트에 대한 정보를 바 차트로 제공한다. 처리중인 리퀘스트는 단계별로
+만족(Info), 허용(Warning), 불만(Fatal) 으로 구분하고 각각을 녹색, 노란색(3초), 주황색(8초)으로 표시한다.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>전체 액티브 서비스는 현재 처리중인 전체 인스턴스의 상태 정보를 제공한다.</p>
+</li>
+<li>
+<p>액티브 서비스는 현재 처리중인 개별 인스턴스 상태 정보를 제공한다.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>처리중인 리퀘스트들이 표시될 때, 해당 차트 선택하면 액티브 서비스 정보 모달이 나타나고 진행중인
+리퀘스트에 대한 정보를 얻을 수 있다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/active_service.png" alt="active service"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">액티브 서비스 정보</dt>
+<dd>
+<p><code>액티브 서비스</code> 에서 차트를 선택하면 나타나는 모달로 정보를 제공한다. 쓰레드에 대한 메타데이터와 진행중인
+스택 정보를 볼 수 있다. 쓰레드가 지연되고 있으면 스택에서 이슈가 있을 확률이 높아 해당 스택을 분석할 필요가
+있다.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/active_service_detail.png" alt="active service detail"></span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">TPS, 오늘의 TPS</dt>
+<dd>
+<p>TPS는 초당 처리량을 의미하고 오늘의 TPS는 당일 시간대별 TPS 의 평균을 의미한다.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/tps_todaytps.png" alt="tps todaytps"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">방문자, 응답시간</dt>
+<dd>
+<p>방문자는 5분간 방문한 유니크한 방문자 수를, 응답시간은 애플리케이션 응답시간을 의미한다.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/visitors_responsetime.png" alt="visitors responsetime"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CPU, 메모리</dt>
+<dd>
+<p>CPU 와 메모리 사용량을 제공한다.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/cpu_memory.png" alt="cpu memory"></span></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">XLog</dt>
+<dd>
+<p>시간별 응답시간 정보를 scatter 산점도 차트로 표현한다. 차트에서 X 축은 요청이 발생한 시간을 Y 축은
+응답시간을 의미한다. 해당 요청에 대한 HTTP 응답 코드에 따라 차트에 표시되는 색이 녹색 또는 주황색으로
+표시되며 주황색은 오류 발생(HTTP 5xx 코드)을 의미한다.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>차트의 일부 영역을 마우스로 블록 지정하면 XLog Info 에서 해당 영역에서 처리된 요청들에 대한 상세 프로파일을
+분석할 수 있다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>콘솔에서 표시되는 XLog 최대 응답 크기의 기본값은 20MB 이다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/xlog_scatter.png" alt="xlog scatter"></span></p>
+</div>
+<div class="paragraph">
+<p>XLog Info 에서는 XLog 산점도 차트에서 선택한 영역을 기준으로 실행된 요청에 대한 정보를 나열한다. 특정
+요청을 선택하면 해당 요청에 대한 시작시간, 수행시간, CPU 소요 시간 등의 정보를 확인할 수 있다.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>XLog 드래그 최대 개수는 기본 2000개로 설정되어 있으며, 이를 초과하면 드래그 범위를 줄이거나 설정을 변경해야 한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/xlog_limited.png" alt="xlog limited"></span></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/xlog_details_info.png" alt="xlog details info"></span></p>
+</div>
+<div class="paragraph">
+<p>각 항목에 대한 내용은 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">애플리케이션 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">파드명</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">파드 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Txid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">트랜잭션 ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 URL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IP 주소</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">요청이 발생한 IP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cpu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 CpuTime</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메모리</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스에서 사용한 memory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 소요시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시작 시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 시작시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">종료 시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스 종료시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API 개수</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스에서 API 수행 횟수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API 시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스에서 사용된 API 시간의 합</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SQL 개수</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스에서 SQL 수행 횟수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SQL 시간</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스에서 사용된 SQL 시간의 합</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>프로파일에서는 해당 메소드의 실행에 소요된 시간을 표시한다. 메소드들의 실행 관계는 트리 형태로 표현하며 이전
+단계와 시간 차이를 T-GAP 으로 표시한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/xlog_details_profile.png" alt="xlog details profile"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>XLog 에서는 응답시간에 따라 일정 확률로 로그를 남긴다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">응답시간</th>
+<th class="tableblock halign-left valign-top">확률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0~1초 사이</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1~2초 사이</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2~3초 사이</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3초 이상</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100%</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>XLog에서 <code><code>Bind SQL Parameter</code></code> 를 활성화하면 프로파일에서 SQL문에 바인딩 된 실제 값을 표시할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/xlog-sql-bind-result.png" alt="xlog sql bind result"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_apm"><a class="anchor" href="#_apm"></a>APM</h3>
+<div class="paragraph">
+<p>APM 탭에서는 수집한 메트릭을 개요보다 더 상세하게 기간별로 제공한다. 주요 모니터링 항목은 다음과 같다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목</th>
+<th class="tableblock halign-left valign-top">메트릭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서비스</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 시간, GC 시간, 오류 비율, 사용된 Heap, 사용된 Perm, 서비스 카운트, TPS, 액티브 서비스</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/menu/namespace/monitoring/application/tab_apm.png" alt="tab apm"></span></p>
+</div>
+<div class="paragraph">
+<p>개요에서 설명을 한 항목을 제외하고 추가된 항목에 대한 설명은 다음과 같다.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">GC 시간</dt>
+<dd>
+<p>GC 시간은 Garbage Collection 시간을 의미하며, GC 시간이 길어지면 서비스 응답 시간이 느려질 수 있다.</p>
+</dd>
+<dt class="hdlist1">오류 비율</dt>
+<dd>
+<p>오류 비율은 서비스에서 발생한 오류 비율을 의미한다.</p>
+</dd>
+<dt class="hdlist1">사용된 Heap, 사용된 Perm</dt>
+<dd>
+<p>사용된 Heap 은 Heap Memory 사용량을, 사용된 Perm 은 Perm Memory 사용량을 의미한다.</p>
+</dd>
+<dt class="hdlist1">서비스 카운트</dt>
+<dd>
+<p>서비스 카운트는 서비스 호출 횟수를 의미한다.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xlog"><a class="anchor" href="#_xlog"></a>XLog</h3>
+<div class="paragraph">
+<p>XLog 탭에서는 수집한 XLog를 개요보다 더 상세하게 기간별로 제공한다.
+기간별 조회를 제외하고 이전 설명과 기능은 동일하다.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../../_/js/site.js" data-ui-root-path="../../../../../_"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

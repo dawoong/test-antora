@@ -8,5 +8,6 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-213/ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: true
+
