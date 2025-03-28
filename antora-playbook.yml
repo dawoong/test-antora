@@ -4,9 +4,9 @@ site:
 content:
   sources:
   - url: https://github.com/dawoong/test-antora.git
-    branched: [master]
+    branched: [stephengold]
 
 ui:
   bundle:
-    url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-213/ui-bundle.zip
-
+    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
+    snapshot: true
